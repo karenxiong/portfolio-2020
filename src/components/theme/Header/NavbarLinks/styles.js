@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   a {
-    color: #000;
     text-decoration: none;
+    text-transform: uppercase;
 
     @media (max-width: 960px) {
-      color: ${({ theme }) => (theme.mode === 'light' ? '#000' : '#fff')};
+      color: ${({ theme }) => (theme.mode === 'light' ? '#686868' : '#fff')};
     }
   }
 
@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
 			}
 
 			a {
-					margin-right: 1rem;
+					margin-right: 3rem;
 
 					&:last-child {
 							margin-right: unset;
