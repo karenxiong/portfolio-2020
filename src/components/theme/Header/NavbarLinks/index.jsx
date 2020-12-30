@@ -6,8 +6,12 @@ import ToggleTheme from 'components/theme/Header/ToggleTheme';
 import { Wrapper } from './styles';
 
 const StyledLink = styled(AnchorLink)`
-  font-weight: ${({ active }) => (active ? '600' : '500')};
   color: ${({ active }) => (active ? '#333333' : '#686868')};
+  font-weight: ${({ active }) => (active ? '600' : '500')};
+
+  &:hover {
+    font-weight: 600;
+  }
 `;
 const NavbarLinks = ({ desktop }) => {
   const [activeLink, setActiveLink] = useState('work');

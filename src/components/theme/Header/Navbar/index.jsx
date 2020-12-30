@@ -27,7 +27,7 @@ const BrandSecondaryText = styled.span`
 `;
 
 const Brand = ({ primaryText, secondaryText }) => (
-  <StyledBrand>
+  <StyledBrand as={Link} to="/">
     {primaryText}
     <BrandSecondaryText>{secondaryText}</BrandSecondaryText>
   </StyledBrand>
@@ -35,7 +35,7 @@ const Brand = ({ primaryText, secondaryText }) => (
 
 const Navbar = () => (
   <Wrapper as={Container}>
-    <Brand as={Link} to="/" primaryText="karen" secondaryText="xiong" />
+    <Brand primaryText="karen" secondaryText="xiong" />
     <NavbarLinks desktop />
   </Wrapper>
 );
