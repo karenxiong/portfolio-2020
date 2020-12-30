@@ -603,8 +603,8 @@ export const Global = createGlobalStyle`
       margin: 0;
       padding: 0;
       font-family: 'Avenir Next', 'Nunito', 'Roboto', Helvetica, sans-serif;
-      color: ${({ theme }) => (theme === 'light' ? 'hsla(0, 0%, 0%, 0.8)' : '#fff')};
-      background-color: ${({ theme }) => (theme === 'light' ? '#fff' : '#212121')};
+      color: ${({ theme }) => (theme.mode === 'light' ? 'hsla(0, 0%, 0%, 0.8)' : '#fff')};
+      background-color: ${({ theme }) => (theme.mode === 'light' ? '#fff' : '#212121')};
       transition: .3s all;
       font-weight: normal;
       word-wrap: break-word;
