@@ -8,6 +8,7 @@ import { Wrapper } from './styles';
 const StyledLink = styled(AnchorLink)`
   color: ${({ active }) => (active ? '#333333' : '#686868')};
   font-weight: ${({ active }) => (active ? '600' : '500')};
+  ${({ active }) => !active && 'font-size: 0.88rem'};
 
   &:hover {
     font-weight: 600;
