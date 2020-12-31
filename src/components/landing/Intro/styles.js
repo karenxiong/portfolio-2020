@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-import overlayIllustration from 'assets/illustrations/overlay.svg';
 
 export const Wrapper = styled.div`
   padding-bottom: 4rem;
-  background-image: url(${overlayIllustration});
   background-size: contain;
   background-position: right top;
   background-repeat: no-repeat;
@@ -58,8 +56,8 @@ export const Details = styled.div`
   }
 `;
 
-export const Thumbnail = styled.div`
-  flex: 1;
+export const Main = styled.div`
+  flex: 3;
 
   @media (max-width: 960px) {
     width: 100%;
