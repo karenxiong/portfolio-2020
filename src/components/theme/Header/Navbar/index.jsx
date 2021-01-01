@@ -12,30 +12,25 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-const StyledBrand = styled.a`
+const Brand = styled.a`
   text-transform: uppercase;
   font-weight: 600;
-  color: ${({ theme }) => (theme.mode === 'light' ? '#000' : '#fff')};
+  color: ${({ theme }) => (theme.mode === 'light' ? 'rgba(0, 0, 0, 0)' : '#fff')};
+  background: ${({ theme }) => theme.brandGradiant}
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
 
   @media (max-width: 960px) {
     mix-blend-mode: ${({ theme }) => (theme.mode === 'light' ? 'unset' : 'difference')};
   }
 `;
 
-const BrandSecondaryText = styled.span`
-  color: ${({ theme }) => (theme.mode === 'light' ? '#7A7A7A' : '#fff')};
-`;
-
-const Brand = ({ primaryText, secondaryText }) => (
-  <StyledBrand as={Link} to="/">
-    {primaryText}
-    <BrandSecondaryText>{secondaryText}</BrandSecondaryText>
-  </StyledBrand>
-);
-
 const Navbar = () => (
-  <Wrapper as={Container}>
-    <Brand primaryText="karen" secondaryText="xiong" />
+  <Wrapper as={Container} id="work">
+    <Brand as={Link} to="/">
+      karenxiong
+    </Brand>
     <NavbarLinks desktop />
   </Wrapper>
 );

@@ -2,6 +2,14 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   padding: 2rem 0;
+  margin: 0;
+  @media (min-width: 601px) {
+    width: 100%;
+  }
+
+  @media (min-width: 993px) {
+    width: 100%;
+  }
 `;
 
 export const Grid = styled.div`

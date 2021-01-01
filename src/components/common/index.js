@@ -5,4 +5,5 @@ export * from './Card';
 export * from './H1';
 export * from './Feed';
 export * from './Input';
+export * from './Link';
 export * from './SEO';
