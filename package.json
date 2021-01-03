@@ -1,9 +1,9 @@
 {
-  "name": "portfolio",
+  "name": "KarenXiong",
   "private": true,
-  "description": "A simple portfolio for developers",
-  "version": "0.1.2",
-  "author": "Smakosh <ismai23l@hotmail.com>",
+  "description": "A lushi full of love filled porfolio",
+  "version": "1.0.0",
+  "author": "xiongykaren@gmail.com",
   "dependencies": {
     "@reach/rect": "^0.12.1",
     "@reach/tabs": "^0.12.1",

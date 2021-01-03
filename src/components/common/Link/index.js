@@ -29,7 +29,9 @@ export const Link = styled.a`
     color: rgba(0, 0, 0, 0);
   }
 
+  @media (max-width: 960px) {
+    font-size: 1.25rem;
+  }
   @media (max-width: 680px) {
-    font-size: 0.75rem;
   }
 `;

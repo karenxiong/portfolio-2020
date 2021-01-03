@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 2rem 0;
+  padding: 1rem 0;
   margin: 0;
   @media (min-width: 601px) {
     width: 100%;
@@ -15,14 +15,12 @@ export const Wrapper = styled.div`
 export const Grid = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 8fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   gap: 1.2rem 1.2rem;
 
   @media (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr);
   }
-
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
   }

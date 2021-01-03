@@ -6,4 +6,5 @@ export * from './H1';
 export * from './Feed';
 export * from './Input';
 export * from './Link';
+export * from './Responsive';
 export * from './SEO';

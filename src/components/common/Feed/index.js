@@ -1,12 +1,36 @@
 import React, { useState, useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import styled, { ThemeContext } from 'styled-components';
 import { useRect } from '@reach/rect';
 import { Tabs, TabList, Tab, TabPanels, TabPanel, useTabsContext } from '@reach/tabs';
 import '@reach/tabs/styles.css';
 
 import { Projects } from 'components/landing';
 
-export const Feed = () => {
+const DesktopFeed = styled(
+  React.forwardRef((props, ref) => (
+    <Tabs ref={ref} {...props}>
+      {props.children}
+    </Tabs>
+  ))
+)`
+  @media (max-width: 960px) {
+    display: none;
+  }
+`;
+
+const MobileFeed = styled(
+  React.forwardRef((props, ref) => (
+    <Tabs ref={ref} {...props}>
+      {props.children}
+    </Tabs>
+  ))
+)`
+  @media (min-width: 961px) {
+    display: none;
+  }
+`;
+
+export const Feed = ({ mobile }) => {
   const TAB_BORDER_BOTTOM_HEIGHT = 4;
   const TAB_LIST_BOTTOM_BORDER_HEIGHT = 2;
   const theme = useContext(ThemeContext);
@@ -22,12 +46,22 @@ export const Feed = () => {
     const ref = React.useRef();
     const rect = useRect(ref);
 
+    const FeedComponent = mobile ? MobileFeed : DesktopFeed;
     return (
       // put the function to change the styles on context so an active Tab
       // can call it, then style it up
       <AnimatedContext.Provider value={setActiveRect}>
         {/* make sure to forward props since we're wrapping Tabs */}
-        <Tabs {...rest} ref={ref} style={{ ...rest.style, position: 'relative' }}>
+        <FeedComponent
+          {...rest}
+          ref={ref}
+          style={{
+            ...rest.style,
+            position: 'relative',
+            height: '100%',
+            overflow: 'hidden',
+          }}
+        >
           {children(index)}
           <div
             style={{
@@ -46,7 +80,7 @@ export const Feed = () => {
               width: activeRect && activeRect.width,
             }}
           />
-        </Tabs>
+        </FeedComponent>
       </AnimatedContext.Provider>
     );
   }
@@ -83,7 +117,7 @@ export const Feed = () => {
     );
   }
   return (
-    <AnimatedTabs id="work">
+    <AnimatedTabs>
       {currentTabIndex => (
         <>
           <TabList
@@ -101,13 +135,12 @@ export const Feed = () => {
               </AnimatedTab>
             ))}
           </TabList>
-          <TabPanels style={{ padding: 10 }}>
-            <TabPanel>
-              <p>Check it out! It's ~animated~</p>
-            </TabPanel>
+          <TabPanels style={{ padding: 10, height: '100%', overflow: 'auto' }}>
             <TabPanel>
               <p>Coming soon!</p>
-              {/* <Projects /> */}
+            </TabPanel>
+            <TabPanel>
+              <Projects />
             </TabPanel>
           </TabPanels>
         </>
