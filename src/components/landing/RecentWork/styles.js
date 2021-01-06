@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 export const Grid = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 6fr 5fr;
   grid-template-rows: minmax(0, 1fr);
   gap: 1.2rem 1.2rem;
 
@@ -30,7 +30,6 @@ export const Item = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
 
   h4 {
     color: ${({ theme }) => (theme.mode === 'light' ? '#212121' : '#fff')};
@@ -42,8 +41,20 @@ export const Item = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 1rem 0;
-  min-height: 160px;
+  min-height: 130px;
+
+  h4 {
+    font-family: Castoro;
+    font-weight: normal;
+    font-style: italic; 
+    font-weight 1.25rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
 `;
 
 export const Stats = styled.div`
@@ -74,4 +85,30 @@ export const Stats = styled.div`
 export const Languages = styled.div`
   opacity: 0.5;
   font-size: 14px;
+`;
+
+export const StatusWrapper = styled.div`
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1rem;
+`;
+
+export const Hyphen = styled.div`
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.25rem;
+`;
+
+export const Title = styled.h5`
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : 'white')};
+  margin: 0;
+`;
+
+export const Date = styled.div`
+  font-family: Castoro;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: ${({ theme }) => (theme.mode === 'light' ? '#7a7a7a' : 'white')};
 `;

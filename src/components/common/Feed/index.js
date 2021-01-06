@@ -4,7 +4,7 @@ import { useRect } from '@reach/rect';
 import { Tabs, TabList, Tab, TabPanels, TabPanel, useTabsContext } from '@reach/tabs';
 import '@reach/tabs/styles.css';
 
-import { Projects } from 'components/landing';
+import { RecentWork, Projects } from 'components/landing';
 
 const DesktopFeed = styled(
   React.forwardRef((props, ref) => (
@@ -109,7 +109,7 @@ export const Feed = ({ mobile }) => {
           padding: 0,
           // padding: `4px ${HORIZONTAL_PADDING}px`,
           marginRight: '3rem',
-          textTransform: 'uppercase',
+          fontVariant: 'small-caps',
           fontWeight: isSelected ? '600' : '500',
           color: isSelected ? (theme.mode === 'light' ? props.color : 'white') : '#7A7A7A',
         }}
@@ -135,11 +135,11 @@ export const Feed = ({ mobile }) => {
               </AnimatedTab>
             ))}
           </TabList>
-          <TabPanels style={{ padding: 10, height: '100%', overflow: 'auto' }}>
-            <TabPanel>
-              <p>Coming soon!</p>
+          <TabPanels style={{ marginTop: '.75rem', height: '100%', overflow: 'auto' }}>
+            <TabPanel style={{ padding: '0 .75rem' }}>
+              <RecentWork />
             </TabPanel>
-            <TabPanel>
+            <TabPanel style={{ padding: '0 .75rem' }}>
               <Projects />
             </TabPanel>
           </TabPanels>

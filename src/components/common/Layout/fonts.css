@@ -53,3 +53,12 @@
   src: local('Castoro Italic'), local('Castoro-Italic'),
     url('./fonts/Castoro-Italic.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'SF Pro Rounded';
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 400;
+  src: local('SF Pro Rounded'), local('SF-Pro-Rounded'),
+    url('./fonts/SF-Pro-Rounded-Regular.ttf') format('truetype');
+}

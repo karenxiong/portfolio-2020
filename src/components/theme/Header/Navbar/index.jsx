@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const Brand = styled.a`
-  text-transform: uppercase;
+  font-variant: small-caps;
   font-weight: 600;
   color: ${({ theme }) => (theme.mode === 'light' ? 'rgba(0, 0, 0, 0)' : '#fff')};
   background: ${({ theme }) => theme.brandGradiant}

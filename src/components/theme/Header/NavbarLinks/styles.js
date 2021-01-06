@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   a {
     text-decoration: none;
-    text-transform: uppercase;
+    font-variant: small-caps;
     transition: all 0.5s ease;
 
     @media (max-width: 960px) {
