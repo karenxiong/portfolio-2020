@@ -65,6 +65,7 @@ export const Feed = ({ mobile }) => {
           {children(index)}
           <div
             style={{
+              borderRadius: '8px',
               position: 'absolute',
               height: TAB_BORDER_BOTTOM_HEIGHT,
               // background: color,
@@ -136,7 +137,7 @@ export const Feed = ({ mobile }) => {
             ))}
           </TabList>
           <TabPanels style={{ marginTop: '.75rem', height: '100%', overflow: 'auto' }}>
-            <TabPanel style={{ padding: '0 .75rem' }}>
+            <TabPanel>
               <RecentWork />
             </TabPanel>
             <TabPanel style={{ padding: '0 .75rem' }}>

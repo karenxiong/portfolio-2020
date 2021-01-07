@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Header } from 'components/theme';
 import { Container, Button, Desktop, Mobile, Feed, Link } from 'components/common';
 import dev from 'assets/illustrations/dev.svg';
-import { Wrapper, IntroWrapper, Details, Name, Status } from './styles';
+import { Wrapper, IntroWrapper, Details, Name, Status, Avatar, AvatarBorder } from './styles';
 
 export const Intro = () => (
   <>
@@ -14,6 +14,9 @@ export const Intro = () => (
       <IntroWrapper as={Container}>
         <Details>
           <div>
+            <AvatarBorder>
+              <Avatar />
+            </AvatarBorder>
             <Name>Karen Xiong</Name>
             <h5>UI/UX Designer</h5>
             <Status>Currently designing @</Status>

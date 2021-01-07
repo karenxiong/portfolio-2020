@@ -13,6 +13,16 @@ export const TitleWrap = styled.div`
   justify-content: space-between;
 `;
 
+export const CaseStudyDetailsCard = styled(Card)`
+  padding: 0;
+  margin-bottom: 1rem;
+  background: transparent;
+
+  @media (max-width: 680px) {
+    margin-bototm: 1.5rem;
+  }
+`;
+
 const StyledCaseStudyCard = styled.div`
   border-radius: 8px;
   display: flex;
@@ -25,6 +35,13 @@ const StyledCaseStudyCard = styled.div`
 
   img {
     svg: 0;
+  }
+
+  @media (max-width: 960px) {
+  }
+
+  @media (max-width: 680px) {
+    min-height: 13rem;
   }
 `;
 const Label = styled.div`

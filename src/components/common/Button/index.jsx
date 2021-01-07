@@ -40,12 +40,17 @@ const StyledCaseStudyButton = styled.button`
   padding: 0.75em 1em;
   border: ${({ theme, color }) => `1px solid ${theme.mode === 'light' ? color : 'white'}`};
   border-radius: 8px;
+  ${'' /* margin-top: 1.5rem; */}
 
   svg {
     margin: 0 0.25rem;
     path {
       fill: ${({ theme, color }) => (theme.mode === 'light' ? color : 'white')};
     }
+  }
+  @media (max-width: 680px) {
+    width: 100%;
+    justify-content: center;
   }
 `;
 export const CaseStudyButton = ({ Icon, color, children }) => (

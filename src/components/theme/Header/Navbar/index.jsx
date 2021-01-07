@@ -6,10 +6,15 @@ import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
 
 const Wrapper = styled.div`
-  padding: 1.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2.5rem 0 2rem 0;
+
+  @media (max-width: 960px) {
+    padding: 1.5rem 0;
+    mix-blend-mode: ${({ theme }) => (theme.mode === 'light' ? 'unset' : 'difference')};
+  }
 `;
 
 const Brand = styled.a`
