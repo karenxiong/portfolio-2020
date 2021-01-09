@@ -16,8 +16,7 @@ export const Link = styled.a`
   font-weight: 500;
   font-size: 1rem;
   border-radius: 3px;
-  color: ${({ theme }) => (theme.mode === 'light' ? '#2D00F7' : '#e6e6e6')};
-
+  color: ${({ theme }) => (theme.mode === 'light' ? theme.color[0] : theme.darkColor[0])};
   background: ${({ theme }) => theme.brandGradiant}
   background-size: 200% 200%;
   animation: ${rainbow} 2s ease-in-out infinite;

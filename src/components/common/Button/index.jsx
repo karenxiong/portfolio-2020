@@ -34,11 +34,11 @@ export const Button = styled.button`
 const StyledCaseStudyButton = styled.button`
   display: flex;
   color: ${({ theme, color }) => (theme.mode === 'light' ? color : 'white')};
-  background: transparent;
+  background: ${({ theme, color }) => (theme.mode === 'light' ? 'transparent' : color)};
   font-size: 0.8em;
   font-weight: 500;
   padding: 0.75em 1em;
-  border: ${({ theme, color }) => `1px solid ${theme.mode === 'light' ? color : 'white'}`};
+  border: ${({ color }) => `1px solid ${color}}`};
   border-radius: 8px;
   ${'' /* margin-top: 1.5rem; */}
 
@@ -53,9 +53,37 @@ const StyledCaseStudyButton = styled.button`
     justify-content: center;
   }
 `;
-export const CaseStudyButton = ({ Icon, color, children }) => (
+export const CaseStudyButton = ({ Icon, color, iconLeft, children }) => (
   <StyledCaseStudyButton color={color}>
+    {iconLeft && <Icon aria-label={children} />}
     {children}
-    <Icon aria-label={children} />
+    {!iconLeft && <Icon aria-label={children} />}
   </StyledCaseStudyButton>
+);
+export const StyledPrimaryButton = styled(StyledCaseStudyButton)`
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem;
+  width: 8rem;
+  justify-content: center;
+  color: white;
+  background: transparent;
+  background: ${({ color }) => color};
+
+  svg {
+    path {
+      fill: white;
+    }
+  }
+
+  @media (max-width: 680px) {
+    width: 8rem;
+  }
+`;
+export const PrimaryButton = ({ Icon, color, iconLeft, children }) => (
+  <StyledPrimaryButton color={color}>
+    {iconLeft && <Icon aria-label={children} />}
+    {children}
+    {!iconLeft && <Icon aria-label={children} />}
+  </StyledPrimaryButton>
 );

@@ -35,8 +35,20 @@ export const Feed = ({ mobile }) => {
   const TAB_LIST_BOTTOM_BORDER_HEIGHT = 2;
   const theme = useContext(ThemeContext);
   const tabs = [
-    { text: 'recent work', color: theme.color[0], borderColor: theme.borderColor[0] },
-    { text: 'coding', color: theme.color[7], borderColor: theme.borderColor[7] },
+    {
+      text: 'recent work',
+      color: theme.color[1],
+      borderColor: theme.borderColor[1],
+      darkColor: theme.darkColor[1],
+      darkBorderColor: theme.darkBorderColor[1],
+    },
+    {
+      text: 'coding',
+      color: theme.color[7],
+      borderColor: theme.borderColor[7],
+      darkColor: theme.color[7],
+      darkBorderColor: theme.darkBorderColor[7],
+    },
   ];
 
   const AnimatedContext = React.createContext();
@@ -69,7 +81,7 @@ export const Feed = ({ mobile }) => {
               position: 'absolute',
               height: TAB_BORDER_BOTTOM_HEIGHT,
               // background: color,
-              background: theme.mode === 'light' ? tabs[index].color : 'white',
+              background: theme.mode === 'light' ? tabs[index].color : tabs[index].darkColor,
               transition: 'all 300ms ease',
               left: (activeRect && activeRect.left) - (rect && rect.left),
               top:
@@ -112,7 +124,13 @@ export const Feed = ({ mobile }) => {
           marginRight: '3rem',
           fontVariant: 'small-caps',
           fontWeight: isSelected ? '600' : '500',
-          color: isSelected ? (theme.mode === 'light' ? props.color : 'white') : '#7A7A7A',
+          color: isSelected
+            ? theme.mode === 'light'
+              ? props.color
+              : props.darkColor
+            : theme.mode === 'light'
+            ? '#7A7A7A'
+            : '#CECECE',
         }}
       />
     );
@@ -126,12 +144,12 @@ export const Feed = ({ mobile }) => {
               background: 'inherit',
               height: '2rem',
               borderBottom: `${TAB_LIST_BOTTOM_BORDER_HEIGHT}px solid ${
-                theme.mode === 'light' ? tabs[currentTabIndex].borderColor : 'white'
+                theme.mode === 'light' ? tabs[currentTabIndex].borderColor : tabs[currentTabIndex].darkBorderColor
               }`,
             }}
           >
             {tabs.map((tab, i) => (
-              <AnimatedTab key={i} index={i} color={tab.color}>
+              <AnimatedTab key={i} index={i} color={tab.color} darkColor={tab.darkColor}>
                 {tab.text}
               </AnimatedTab>
             ))}

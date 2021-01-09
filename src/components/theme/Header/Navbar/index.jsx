@@ -20,8 +20,8 @@ const Wrapper = styled.div`
 const Brand = styled.a`
   font-variant: small-caps;
   font-weight: 600;
-  color: ${({ theme }) => (theme.mode === 'light' ? 'rgba(0, 0, 0, 0)' : '#fff')};
-  background: ${({ theme }) => theme.brandGradiant}
+  color: rgba(0, 0, 0, 0);
+  background: ${({ theme }) => (theme.mode === 'light' ? theme.brandGradiant : theme.darkBrandGradiant)};
   background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;

@@ -17,13 +17,14 @@ export const Grid = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 6fr 5fr;
-  grid-template-rows: minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(230px, 1fr));
   gap: 2.5rem 2.5rem;
 
   @media (max-width: 960px) {
   }
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(0px, auto));
     gap: 1.5rem;
   }
 `;
@@ -44,19 +45,20 @@ export const Item = styled.div`
 
 export const Content = styled.div`
   margin-top: 1rem;
-  min-height: 145px;
+  ${'' /* min-height: 145px; */}
 
   h4 {
     font-family: Castoro;
     font-weight: normal;
     font-style: italic; 
     font-weight 1.25rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   p {
     font-size: .8rem;
     line-height: 1.5rem;
+    color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#fff')};
   }
 
   @media (max-width: 1200px) {

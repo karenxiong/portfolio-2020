@@ -6,7 +6,14 @@ import ToggleTheme from 'components/theme/Header/ToggleTheme';
 import { Wrapper } from './styles';
 
 const StyledLink = styled(AnchorLink)`
-  color: ${({ active, theme }) => (active === 'true' ? (theme.mode === 'light' ? theme.color[0] : '#fff') : '#686868')};
+  color: ${({ active, theme }) =>
+    active === 'true'
+      ? theme.mode === 'light'
+        ? theme.color[0]
+        : theme.darkColor[0]
+      : theme.mode === 'light'
+      ? '#686868'
+      : '#CECECE'};
   font-weight: ${({ active }) => (active === 'true' ? '600' : '500')};
   ${({ active }) => !active && 'font-size: 0.88rem'};
   transition: all 0.5s ease;

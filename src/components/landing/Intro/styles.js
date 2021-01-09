@@ -36,6 +36,9 @@ export const IntroWrapper = styled.div`
 `;
 
 export const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: 2rem;
 

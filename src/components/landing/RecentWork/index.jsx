@@ -100,7 +100,7 @@ export const RecentWork = () => {
               <p>Build meaningful relationship with your neighbors.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#4F4E90" Icon={lock} as={Link} to="/locals">
+              <CaseStudyButton color="#25A2B8" Icon={lock} as={Link} to="/locals">
                 View case study
               </CaseStudyButton>
             </CaseStudyButtonWrapper>

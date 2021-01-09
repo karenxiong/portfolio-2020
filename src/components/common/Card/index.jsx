@@ -30,7 +30,7 @@ const StyledCaseStudyCard = styled.div`
   align-items: center;
   justify-content: center;
 
-  background: ${({ background, theme }) => (theme.mode === 'light' ? background : '#181717')};
+  background: ${({ background }) => background};
   height: 100%;
 
   img {

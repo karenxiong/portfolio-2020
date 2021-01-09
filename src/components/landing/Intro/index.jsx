@@ -1,37 +1,42 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import styled from 'styled-components';
 
 import { Header } from 'components/theme';
-import { Container, Button, Desktop, Mobile, Feed, Link } from 'components/common';
+import { Container, Button, Desktop, Mobile, Feed, Link, PrimaryButton } from 'components/common';
+import download from 'assets/icons/download.svg';
 import dev from 'assets/illustrations/dev.svg';
 import { Wrapper, IntroWrapper, Details, Name, Status, Avatar, AvatarBorder } from './styles';
 
-export const Intro = () => (
-  <>
-    <Wrapper>
-      <Header />
-      <IntroWrapper as={Container}>
-        <Details>
-          <div>
+export const Intro = () => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <>
+      <Wrapper>
+        <Header />
+        <IntroWrapper as={Container}>
+          <Details>
             <AvatarBorder>
               <Avatar />
             </AvatarBorder>
             <Name>Karen Xiong</Name>
             <h5>UI/UX Designer</h5>
             <Status>Currently designing @</Status>
-            <Link href="https://myshoperon.com/">MyShoperon</Link>
-          </div>
-          {/* <Button as={AnchorLink} href="#contact">
-          Hire me
-        </Button> */}
-        </Details>
+            <Link styles={{ display: 'block' }} href="https://myshoperon.com/">
+              MyShoperon
+            </Link>
+            <PrimaryButton color={theme.color[2]} Icon={download} to="/" iconLeft>
+              Resume
+            </PrimaryButton>
+          </Details>
 
-        <Feed />
-      </IntroWrapper>
-    </Wrapper>
-    <Mobile as={Container}>
-      <Feed mobile />
-    </Mobile>
-  </>
-);
+          <Feed />
+        </IntroWrapper>
+      </Wrapper>
+      <Mobile as={Container}>
+        <Feed mobile />
+      </Mobile>
+    </>
+  );
+};
