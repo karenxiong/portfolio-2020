@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: transparent;
+  background-color: ${({ theme }) => (theme.mode === 'light' ? '#fff' : '#212121')};
   width: 100%;
+  ${'' /* position: sticky;
+  top: 0px; */}
 `;
 
 export const Overlay = styled.div`

@@ -13,9 +13,9 @@ export const Intro = () => {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper as={Container}>
         <Header />
-        <IntroWrapper as={Container}>
+        <IntroWrapper>
           <Details>
             <AvatarBorder>
               <Avatar />

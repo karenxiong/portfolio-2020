@@ -1,6 +1,6 @@
 module.exports = {
   defaultTitle: 'Karen Xiong',
-  logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+  logo: 'https://portfolio.smakosh.com/favicon/favicon.svg',
   author: 'Karen Xiong',
   url: 'https://karenxiong.netlify.app/',
   legalName: 'Karen Xiong',

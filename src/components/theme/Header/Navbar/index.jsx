@@ -32,7 +32,7 @@ const Brand = styled.a`
 `;
 
 const Navbar = () => (
-  <Wrapper as={Container} id="work">
+  <Wrapper id="work">
     <Brand as={Link} to="/">
       karenxiong
     </Brand>

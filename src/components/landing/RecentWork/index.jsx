@@ -73,10 +73,10 @@ export const RecentWork = () => {
   return (
     <Wrapper as={Container} id="work">
       <Grid>
-        <Item as="a" href="/myshoperon" theme={theme}>
+        <Item as={Link} to="/" theme={theme}>
           <CaseStudyCard Icon={Locals} label="MyShoperon" background="#4F4E90" font="SF Pro Rounded" />
         </Item>
-        <Item as="a" href="/myshoperon" theme={theme}>
+        <Item as={Link} to="/" theme={theme}>
           <CaseStudyDetailsCard>
             <Content>
               <h4>MyShoperon</h4>
@@ -84,16 +84,16 @@ export const RecentWork = () => {
               <p>An online platform that connects verified and rated neighbours to collect packages for each other.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#4F4E90" Icon={Arrow} as={Link} to="/myshoperon">
+              <CaseStudyButton color="#4F4E90" Icon={Lock} as={Link} to="/">
                 View case study
               </CaseStudyButton>
             </CaseStudyButtonWrapper>
           </CaseStudyDetailsCard>
         </Item>
-        <Item as="a" href="/" theme={theme}>
+        <Item as={Link} to="/locals" theme={theme}>
           <CaseStudyCard Icon={Locals} label="Locals" background="#25A2B8" font="SF Pro Rounded" />
         </Item>
-        <Item as="a" href="/" theme={theme}>
+        <Item as={Link} to="/locals" theme={theme}>
           <CaseStudyDetailsCard>
             <Content>
               <h4>Locals</h4>
@@ -101,7 +101,7 @@ export const RecentWork = () => {
               <p>Build meaningful relationship with your neighbors.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#25A2B8" Icon={Lock} as={Link} to="/">
+              <CaseStudyButton color="#25A2B8" Icon={Arrow} as={Link} to="/locals">
                 View case study
               </CaseStudyButton>
             </CaseStudyButtonWrapper>
