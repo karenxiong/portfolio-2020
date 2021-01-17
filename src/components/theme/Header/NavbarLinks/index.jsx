@@ -32,7 +32,7 @@ const NavbarLinks = ({ desktop }) => {
       {links.map((link, i) => (
         <StyledLink
           key={i}
-          href={`#${link}`}
+          href={link === 'play' ? '#about' : `#${link}`}
           active={link === activeLink ? 'true' : 'false'}
           onClick={() => setActiveLink(link)}
         >

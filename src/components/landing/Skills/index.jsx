@@ -1,24 +1,28 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Container, Button } from 'components/common';
-import dev from 'assets/illustrations/skills.svg';
+import dogWalk from 'assets/illustrations/dog-walk.svg';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
 export const Skills = () => (
   <Wrapper id="about">
     <SkillsWrapper as={Container}>
       <Thumbnail>
-        <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
+        <img
+          src={dogWalk}
+          alt="I am a problem solver, quick study, self starter, and excellent communicator with a passion for great design.
+          I also love playing video games and dogs!"
+        />
       </Thumbnail>
       <Details>
-        <h1>More about me</h1>
+        <h1>About me</h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
-          standard dummy.
+          I am a problem solver, quick study, self starter, and excellent communicator with a passion for great design.
+          I also love playing video games and dogs!
         </p>
-        <Button as={AnchorLink} href="#contact">
+        {/* <Button as={AnchorLink} href="#contact">
           Hire me
-        </Button>
+        </Button> */}
       </Details>
     </SkillsWrapper>
   </Wrapper>

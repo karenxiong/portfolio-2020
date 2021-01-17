@@ -26,7 +26,13 @@ export const Intro = () => {
             <Link styles={{ display: 'block' }} href="https://myshoperon.com/">
               MyShoperon
             </Link>
-            <PrimaryButton color={theme.color[2]} Icon={download} to="/" iconLeft>
+            <PrimaryButton
+              color={theme.color[2]}
+              Icon={download}
+              href="https://www.linkedin.com/in/karen-xiong/"
+              iconLeft
+              as="a"
+            >
               Resume
             </PrimaryButton>
           </Details>

@@ -8,7 +8,8 @@ import { Container, Card, TitleWrap, CaseStudyCard, CaseStudyDetailsCard, CaseSt
 import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import Locals from 'assets/icons/locals.svg';
-import lock from 'assets/icons/lock.svg';
+import Lock from 'assets/icons/lock.svg';
+import Arrow from 'assets/icons/arrow.svg';
 import {
   Wrapper,
   Grid,
@@ -83,16 +84,16 @@ export const RecentWork = () => {
               <p>An online platform that connects verified and rated neighbours to collect packages for each other.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#4F4E90" Icon={lock} as={Link} to="/myshoperon">
+              <CaseStudyButton color="#4F4E90" Icon={Arrow} as={Link} to="/myshoperon">
                 View case study
               </CaseStudyButton>
             </CaseStudyButtonWrapper>
           </CaseStudyDetailsCard>
         </Item>
-        <Item as="a" href="/locals" theme={theme}>
+        <Item as="a" href="/" theme={theme}>
           <CaseStudyCard Icon={Locals} label="Locals" background="#25A2B8" font="SF Pro Rounded" />
         </Item>
-        <Item as="a" href="/locals" theme={theme}>
+        <Item as="a" href="/" theme={theme}>
           <CaseStudyDetailsCard>
             <Content>
               <h4>Locals</h4>
@@ -100,7 +101,7 @@ export const RecentWork = () => {
               <p>Build meaningful relationship with your neighbors.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#25A2B8" Icon={lock} as={Link} to="/locals">
+              <CaseStudyButton color="#25A2B8" Icon={Lock} as={Link} to="/">
                 View case study
               </CaseStudyButton>
             </CaseStudyButtonWrapper>

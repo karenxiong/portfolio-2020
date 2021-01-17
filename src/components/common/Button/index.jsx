@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 8px;
   padding: 0.7rem 2.5rem;
   border: none;
   -webkit-appearance: none;
@@ -14,7 +14,7 @@ export const Button = styled.button`
   -ms-user-select: none;
   user-select: none;
   color: #fff;
-  background: #0074d9;
+  background: ${({ theme }) => theme.color[2]};
 
   &:focus {
     outline: none;
@@ -27,12 +27,13 @@ export const Button = styled.button`
   ${({ secondary }) =>
     secondary &&
     `
-		background: #001F3F;
+		background: ${({ theme }) => theme.color[0]};
 	`}
 `;
 
 const StyledCaseStudyButton = styled.button`
   display: flex;
+  align-items: center;
   color: ${({ theme, color }) => (theme.mode === 'light' ? color : 'white')};
   background: ${({ theme, color }) => (theme.mode === 'light' ? 'transparent' : color)};
   font-size: 0.8em;
@@ -67,7 +68,6 @@ export const StyledPrimaryButton = styled(StyledCaseStudyButton)`
   width: 8rem;
   justify-content: center;
   color: white;
-  background: transparent;
   background: ${({ color }) => color};
 
   svg {
@@ -80,8 +80,8 @@ export const StyledPrimaryButton = styled(StyledCaseStudyButton)`
     width: 8rem;
   }
 `;
-export const PrimaryButton = ({ Icon, color, iconLeft, children }) => (
-  <StyledPrimaryButton color={color}>
+export const PrimaryButton = ({ Icon, iconLeft, children, ...props }) => (
+  <StyledPrimaryButton {...props}>
     {iconLeft && <Icon aria-label={children} />}
     {children}
     {!iconLeft && <Icon aria-label={children} />}
