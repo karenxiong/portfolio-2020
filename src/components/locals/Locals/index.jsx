@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link as InternalLink } from 'gatsby';
 import { ThemeContext } from 'styled-components';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Header } from 'components/theme';
 import {
@@ -10,35 +9,21 @@ import {
   H3,
   H5,
   HR,
-  List,
   ListItem,
   FocusCaption,
   Container,
-  Button,
-  Desktop,
   Mobile,
-  Feed,
   Link,
-  PrimaryButton,
-} from 'components/common';
-
-import download from 'assets/icons/download.svg';
-import DesignProcess from 'assets/illustrations/design-process.svg';
-import {
-  Wrapper,
-  CaseStudyWrapper,
-  CaseStudyHeader,
-  LocalHero,
-  LocalHeroSummary,
+  Hero,
+  HeroSummary,
   CaseStudyAttributes,
   CaseStudyAttribute,
-  Statistics,
-  Stat,
-  TwoColumnGridWrapper,
-  CriteriaList,
-  SynthesisList,
-  Persona,
-} from './styles';
+  CaseStudyWrapper,
+  CaseStudyHeader,
+} from 'components/common';
+
+import DesignProcess from 'assets/illustrations/design-process.svg';
+import { Wrapper, Statistics, Stat, TwoColumnGridWrapper, CriteriaList, SynthesisList, Persona } from './styles';
 
 export const Locals = () => {
   const theme = useContext(ThemeContext);
@@ -53,12 +38,12 @@ export const Locals = () => {
           <div />
         </CaseStudyHeader>
         <CaseStudyWrapper>
-          <LocalHero>
-            <LocalHeroSummary>
+          <Hero>
+            <HeroSummary>
               <H1>Locals</H1>
               <p>Build meaningful relationships with your neighbours.</p>
-            </LocalHeroSummary>
-          </LocalHero>
+            </HeroSummary>
+          </Hero>
           <CaseStudyAttributes>
             <CaseStudyAttribute>
               <H5>role</H5>

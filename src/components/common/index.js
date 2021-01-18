@@ -1,5 +1,6 @@
 export * from './Layout';
 export * from './Container';
+export * from './CaseStudy';
 export * from './Button';
 export * from './Card';
 export * from './Typography';
