@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
 export const CaseStudyWrapper = styled.div`
   align-items: center;
 
+  p {
+    line-height: 1.5rem;
+    color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#fff')};
+  }
+
   @media (max-width: 960px) {
   }
 `;
@@ -81,6 +86,81 @@ export const CaseStudyAttribute = styled.div`
 
   li {
     margin-bottom: 0.5rem;
+  }
+`;
+export const Statistics = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 12rem);
+  grid-template-rows: minmax(0, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem;
+
+  @media (max-width: 960px) {
+    ${'' /* grid-template-columns: repeat(2, 1fr); */}
+    margin: 1.5rem;
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 12rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+`;
+export const Stat = styled.div`
+  text-align: center;
+
+  h3 {
+    color: ${({ color }) => color};
+  }
+  p {
+    font-weight: 500;
+  }
+`;
+
+export const ParticipantCriteria = styled.div`
+  margin: 2.5rem;
+  h5 {
+    font-size: 1.25rem;
+    color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#e6e6e6')};
+  }
+  @media (max-width: 960px) {
+    margin: 1.5rem;
+  }
+  @media (max-width: 680px) {
+  }
+`;
+export const Criterias = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 12rem);
+  grid-template-rows: minmax(0, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem;
+
+  h5 {
+    font-size: 1.25rem;
+    color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#e6e6e6')};
+  }
+  @media (max-width: 960px) {
+    ${'' /* grid-template-columns: repeat(2, 1fr); */}
+    margin: 1.5rem;
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 12rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+`;
+export const Criteria = styled.div`
+  text-align: center;
+
+  h3 {
+    color: ${({ color }) => color};
+  }
+  p {
+    font-weight: 500;
   }
 `;
 
