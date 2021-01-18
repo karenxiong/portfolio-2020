@@ -10,6 +10,8 @@ import {
   H3,
   H5,
   HR,
+  List,
+  ListItem,
   FocusCaption,
   Container,
   Button,
@@ -32,9 +34,10 @@ import {
   CaseStudyAttribute,
   Statistics,
   Stat,
-  ParticipantCriteria,
-  Criteria,
-  Criterias,
+  TwoColumnGridWrapper,
+  CriteriaList,
+  SynthesisList,
+  Persona,
 } from './styles';
 
 export const Locals = () => {
@@ -86,7 +89,7 @@ export const Locals = () => {
           <H2>Project Overview</H2>
           <p>
             This is a capstone project that was created as part of the full-time User Experience program at{' '}
-            <Link style={{ fontSize: '1rem' }} href="https://brainstation.io/">
+            <Link style={{ fontSize: '1rem' }} href="https://brainstation.io/course/toronto/user-experience-immersive">
               BrainStation
             </Link>
             .&nbsp;The goal of this project is to create a solution that tackles social isolation impacting residents
@@ -131,16 +134,40 @@ export const Locals = () => {
             With more knowledge acquired through secondary research and insights, primary research of user interviews
             were then conducted. A participant criteria was established and 10 users were found through social media.
           </p>
-          <ParticipantCriteria>
+          <TwoColumnGridWrapper>
             <H5>participant criteria</H5>
-            <Criterias>
-              <Criteria></Criteria>
-              <Criteria></Criteria>
-              <Criteria></Criteria>
-            </Criterias>
-          </ParticipantCriteria>
+            <CriteriaList>
+              <ListItem color={theme.color[0]}>
+                Must be currently living in a multi-family building (condo/apartment).
+              </ListItem>
+              <ListItem color={theme.color[1]}>Must have resided in the building for a minimum of 1 year.</ListItem>
+              <ListItem color={theme.color[7]}>Must be at least 18 years old.</ListItem>
+            </CriteriaList>
+          </TwoColumnGridWrapper>
           <H2>Synthesis</H2>
           <p>Through the 10 user interviews, common themes were found and 3 primary pain points were identified.</p>
+          <TwoColumnGridWrapper>
+            <SynthesisList>
+              <li>
+                <H5>pain point 01 - busy schedules</H5>
+                With busy schedules, residents have a hard time physically meeting and getting to know their neighbours.
+              </li>
+              <li>
+                <H5>pain point 03 - missed social events</H5>
+                With only brief encounters in the hallways, residents find it difficult to connect with their
+                neighbours.
+              </li>
+              <li>
+                <H5>pain point 02 - no real connections</H5>
+                Social events at buildings are often missed due to busy schedules or simply because it is forgotten.
+              </li>
+            </SynthesisList>
+          </TwoColumnGridWrapper>
+          <p>
+            Due to time constraints, one user type was the primary focus rather than several that were found through
+            research. The primary user type has the greatest needs and is also readily reachable for user testings.{' '}
+          </p>
+          <Persona>persona</Persona>
           <H2>Ideation</H2>
           <p>
             For the first iteration of Locals, inspiration was drawn from chatting platforms such as Slack, Facebook

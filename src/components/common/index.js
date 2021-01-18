@@ -6,6 +6,7 @@ export * from './Typography';
 export * from './Feed';
 export * from './Input';
 export * from './Link';
+export * from './List';
 export * from './Responsive';
 export * from './SEO';
 export * from './HR';

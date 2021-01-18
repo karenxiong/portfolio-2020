@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Memoji from 'assets/illustrations/avatar.png';
 
-import { H1 } from 'components/common';
+import { H1, List, ListItem } from 'components/common';
 
 export const Wrapper = styled.div`
   @media (max-width: 960px) {
@@ -118,7 +118,7 @@ export const Stat = styled.div`
   }
 `;
 
-export const ParticipantCriteria = styled.div`
+export const TwoColumnGridWrapper = styled.div`
   margin: 2.5rem;
   h5 {
     font-size: 1.25rem;
@@ -130,17 +130,19 @@ export const ParticipantCriteria = styled.div`
   @media (max-width: 680px) {
   }
 `;
-export const Criterias = styled.div`
+export const CriteriaList = styled(List)`
   display: grid;
-  grid-template-columns: repeat(3, 12rem);
-  grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(0, auto);
   justify-content: space-between;
   gap: 1rem;
-  margin: 2.5rem;
 
   h5 {
     font-size: 1.25rem;
     color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#e6e6e6')};
+  }
+  li {
+    margin: 0;
   }
   @media (max-width: 960px) {
     ${'' /* grid-template-columns: repeat(2, 1fr); */}
@@ -148,124 +150,59 @@ export const Criterias = styled.div`
   }
 
   @media (max-width: 680px) {
-    grid-template-columns: 12rem;
-    justify-content: center;
-    gap: 2rem;
-  }
-`;
-export const Criteria = styled.div`
-  text-align: center;
-
-  h3 {
-    color: ${({ color }) => color};
-  }
-  p {
-    font-weight: 500;
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    gap: 1.5rem;
   }
 `;
 
-export const Details = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 2rem;
-
-  @media (max-width: 960px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 4rem;
-  }
+export const SynthesisList = styled.ul`
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(0, auto);
+  justify-content: space-between;
+  gap: 3rem;
 
   h5 {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.25rem;
     color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#e6e6e6')};
+    margin: 0;
+  }
 
-    @media (max-width: 960px) {
-      mix-blend-mode: ${({ theme }) => (theme.mode === 'light' ? 'unset' : 'difference')};
-      font-size: 1.25rem;
+  li {
+    margin: 0;
+
+    *:last-child {
+      margin-bottom: 1rem;
     }
-
-    @media (max-width: 680px) {
-    }
   }
-`;
-
-export const Name = styled(H1)`
-  margin-bottom: 0.5rem;
-
   @media (max-width: 960px) {
-    mix-blend-mode: ${({ theme }) => (theme.mode === 'light' ? 'unset' : 'difference')};
-    font-size: 2.5rem;
+    ${'' /* grid-template-columns: repeat(2, 1fr); */}
+    margin: 1.5rem;
   }
 
   @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    gap: 1.5rem;
   }
-
-  ${'' /* @media (max-width: 960px) {
-    width: 100%;
-  } */}
 `;
 
-export const Status = styled.div`
-  margin-bottom: 0;
-  font-weight: 400;
-  color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#fff')};
+export const Persona = styled.div`
+  background: ${({ theme }) => (theme.mode === 'light' ? '#c4c4c4' : '#181717')};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22rem;
+  margin: 0 2.5rem;
 
   @media (max-width: 960px) {
-    mix-blend-mode: ${({ theme }) => (theme.mode === 'light' ? 'unset' : 'difference')};
-    font-size: 1.25rem;
+    height: 16rem;
   }
 
   @media (max-width: 680px) {
+    height: 12rem;
   }
-
-  ${'' /* @media (max-width: 960px) {
-    width: 100%;
-  } */}
-`;
-
-export const Avatar = styled.img`
-  /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-  background-image: url(${Memoji});
-
-  /* make a square container */
-  width: 125px;
-  height: 125px;
-
-  /* fill the container, preserving aspect ratio, and cropping to fit */
-  background-size: cover;
-
-  /* center the image vertically and horizontally */
-  background-position: top center;
-
-  /* round the edges to a circle with border radius 1/2 container size */
-  border-radius: 50%;
-
-  background-color: #fff1f1;
-
-  @media (max-width: 960px) {
-    font-size: 1.25rem;
-  }
-
-  @media (max-width: 680px) {
-  }
-
-  ${'' /* @media (max-width: 960px) {
-    width: 100%;
-  } */}
-`;
-
-export const AvatarBorder = styled.div`
-  margin: 0 auto 1rem auto;
-
-  background: ${({ theme }) => `-webkit-linear-gradient(${theme.color[0]}, ${theme.color[5]}, ${theme.color[9]});`}
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  padding: 0.25rem;
 `;
