@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Hero = styled.div`
   height: 20rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: minmax(0, 1fr);
   gap: 2rem;
   padding: 2rem;
@@ -80,4 +80,56 @@ export const CaseStudyHeader = styled.div`
     ${'' /* grid-template-columns: 1fr;
     padding: 0; */}
   }
+`;
+
+const BlockQuoteWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 2rem 5rem;
+  background: rgba(223, 217, 254, 0.4);
+
+  p {
+    font-style: italic;
+  }
+
+  @media (max-width: 960px) {
+    padding: 2.5rem;
+  }
+  @media (max-width: 680px) {
+    margin: 1rem 0;
+    padding: 2rem;
+  }
+`;
+const QuoteContent = styled.div`
+  p {
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 960px) {
+  }
+  @media (max-width: 680px) {
+  }
+`;
+const Cite = styled.p`
+  font-weight: normal;
+  margin-bottom: 0;
+  align-self: flex-end;
+`;
+export const BlockQuote = ({ cite, children }) => (
+  <BlockQuoteWrapper>
+    <QuoteContent>{children}</QuoteContent>
+    <Cite>{cite}</Cite>
+  </BlockQuoteWrapper>
+);
+
+export const Quote = styled.blockquote`
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 2.75rem 0;
+  text-align: center;
 `;
