@@ -71,7 +71,7 @@ export const RecentWork = () => {
     `
   );
   return (
-    <Wrapper as={Container} id="work">
+    <Wrapper id="work">
       <Grid>
         <Item as={Link} to="/myshoperon" theme={theme}>
           <CaseStudyCard Icon={Locals} label="MyShoperon" background="#4F4E90" font="SF Pro Rounded" />

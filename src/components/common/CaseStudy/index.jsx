@@ -18,6 +18,35 @@ export const Hero = styled.div`
 `;
 export const HeroSummary = styled.div``;
 
+export const TwoStepIteration = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 5rem 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  text-align: center;
+  h5,
+  img {
+    margin-bottom: 0px;
+  }
+  p {
+    text-align: left;
+    max-width: 21rem;
+  }
+  @media (max-width: 960px) {
+    ${'' /* grid-template-columns: repeat(2, 1fr); */}
+  }
+`;
+
+export const Iteration = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const CaseStudyAttributes = styled.div`
   display: grid;
   grid-template-columns: repeat(4, auto);

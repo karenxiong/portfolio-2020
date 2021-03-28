@@ -33,10 +33,16 @@ export const H4 = styled.h4`
   color: ${({ theme }) => (theme.mode === 'light' ? '#686868' : '#fff')};
 `;
 
-export const H5 = styled.h5`
+export const H5 = styled.h5.attrs(props => ({
+  // we can define static props
+  type: 'text',
+
+  // or we can define dynamic ones
+  secondary: props.secondary && '#000000',
+}))`
   font-variant: small-caps;
   font-size: 1rem;
   font-weight: 500;
-  margin: 1rem 0;
-  color: ${({ theme }) => (theme.mode === 'light' ? '#686868' : '#fff')};
+  margin: ${({ secondary }) => (secondary ? '2.5rem 0 1rem 0' : '1rem 0')};
+  color: ${({ theme, secondary }) => (theme.mode === 'light' ? secondary ?? '#686868' : '#fff')};
 `;

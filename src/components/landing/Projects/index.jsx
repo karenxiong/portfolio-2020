@@ -46,7 +46,7 @@ export const Projects = () => {
     `
   );
   return (
-    <Wrapper as={Container} id="work">
+    <Wrapper id="work">
       <Grid>
         {edges.map(({ node }) => (
           <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
