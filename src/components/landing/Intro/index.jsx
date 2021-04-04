@@ -3,12 +3,12 @@ import { ThemeContext } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { Header } from 'components/theme';
-import { Container, Button, Desktop, Mobile, Feed, Link, PrimaryButton } from 'components/common';
+import { Container, Button, Desktop, Mobile, Link, PrimaryButton } from 'components/common';
 import download from 'assets/icons/download.svg';
 import dev from 'assets/illustrations/dev.svg';
 import { Wrapper, IntroWrapper, Details, Name, Status, Avatar, AvatarBorder } from './styles';
 
-export const Intro = () => {
+export const Intro = ({ Feed }) => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -36,7 +36,6 @@ export const Intro = () => {
               Resume
             </PrimaryButton>
           </Details>
-
           <Feed />
         </IntroWrapper>
       </Wrapper>

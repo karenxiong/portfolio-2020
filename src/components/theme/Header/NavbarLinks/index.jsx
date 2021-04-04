@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import ToggleTheme from 'components/theme/Header/ToggleTheme';
 import { Wrapper } from './styles';
@@ -23,22 +24,27 @@ const StyledLink = styled(AnchorLink)`
     font-size: 1rem;
   }
 `;
+
 const NavbarLinks = ({ desktop }) => {
   const [activeLink, setActiveLink] = useState('work');
   const links = ['work', 'play', 'about'];
 
   return (
     <Wrapper desktop={desktop}>
-      {links.map((link, i) => (
-        <StyledLink
-          key={i}
-          href={link === 'play' ? '#about' : `#${link}`}
-          active={link === activeLink ? 'true' : 'false'}
-          onClick={() => setActiveLink(link)}
-        >
-          {link}
-        </StyledLink>
-      ))}
+      <StyledLink href="#work" active={activeLink === 'work' ? 'true' : 'false'} onClick={() => setActiveLink('work')}>
+        work
+      </StyledLink>
+      <StyledLink href="#play" active={activeLink === 'play' ? 'true' : 'false'} onClick={() => setActiveLink('play')}>
+        play
+      </StyledLink>
+      <StyledLink
+        as={Link}
+        to="/about"
+        active={activeLink === 'about' ? 'true' : 'false'}
+        onClick={() => setActiveLink('about')}
+      >
+        about
+      </StyledLink>
       <ToggleTheme />
     </Wrapper>
   );

@@ -97,7 +97,7 @@ export const Feed = ({ mobile }) => {
       </AnimatedContext.Provider>
     );
   }
-  function AnimatedTab({ index, ...props }) {
+  function AnimatedTab({ index, darkColor, ...props }) {
     // get the currently selected index from useTabsContext
     const { selectedIndex } = useTabsContext();
     const isSelected = selectedIndex === index;
@@ -127,7 +127,7 @@ export const Feed = ({ mobile }) => {
           color: isSelected
             ? theme.mode === 'light'
               ? props.color
-              : props.darkColor
+              : darkColor
             : theme.mode === 'light'
             ? '#7A7A7A'
             : '#CECECE',
