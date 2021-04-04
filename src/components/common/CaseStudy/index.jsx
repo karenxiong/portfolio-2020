@@ -162,3 +162,29 @@ export const Quote = styled.blockquote`
   margin: 2.75rem 0;
   text-align: center;
 `;
+
+export const FocusBlock = styled.div`
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem 5rem;
+  background: rgba(223, 217, 254, 0.4);
+
+  @media (max-width: 960px) {
+    padding: 2.5rem;
+  }
+  @media (max-width: 680px) {
+    margin: 1rem 0;
+    padding: 2rem;
+  }
+`;
+export const FocusBlockHeader = styled.p`
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+`;
+export const FocusBlockBody = styled.div`
+  font-weight: 600;
+  font-size: 1.25rem;
+`;
+export const FocusBlockText = styled.span`
+  color: #2d00f7;
+`;

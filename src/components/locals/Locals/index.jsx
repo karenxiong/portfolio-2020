@@ -20,9 +20,15 @@ import {
   CaseStudyAttribute,
   CaseStudyWrapper,
   CaseStudyHeader,
+  FocusBlock,
+  FocusBlockHeader,
+  FocusBlockBody,
+  FocusBlockText,
 } from 'components/common';
 
 import DesignProcess from 'assets/illustrations/design-process.svg';
+import LocalPersona from 'assets/illustrations/local-persona.svg';
+import LocalIdeal from 'assets/illustrations/local-ideal.svg';
 import { Wrapper, Statistics, Stat, TwoColumnGridWrapper, CriteriaList, SynthesisList, Persona } from './styles';
 
 export const Locals = () => {
@@ -149,15 +155,43 @@ export const Locals = () => {
             </SynthesisList>
           </TwoColumnGridWrapper>
           <p>
-            Due to time constraints, one user type was the primary focus rather than several that were found through
-            research. The primary user type has the greatest needs and is also readily reachable for user testings.{' '}
+            After gathering the research found and interview insights, a persona was created to help keep my focus on
+            designing for what will satisfy the users needs. Due to time constraints, one user type was the primary
+            focus rather than several that were found through research. This primary user type has the greatest needs
+            and is also readily reachable for user testings.
           </p>
-          <Persona>persona</Persona>
+          {/* <Persona>persona</Persona> */}
+          <img
+            style={{ width: '100%', marginBottom: '2.25rem', display: 'block' }}
+            src={LocalPersona}
+            alt="local persona diagram"
+          />
+          <p>
+            Based on the persona, Samantha Smith, she feels disconnected from her commnunity and it is clear that her
+            work schedule interferes with her ability to meet and connect with her neighbours. With her busy work
+            schedule, Samantha needs a way to connect and build on those relationships with her neighbours while she is
+            on the go.
+          </p>
+          <FocusBlock>
+            <FocusBlockHeader>How might we...</FocusBlockHeader>
+            <FocusBlockBody>
+              Help residents <FocusBlockText>connect</FocusBlockText> with their neighbours while also{' '}
+              <FocusBlockText>building</FocusBlockText> on those relationships?
+            </FocusBlockBody>
+          </FocusBlock>
           <H2>Ideation</H2>
           <p>
             For the first iteration of Locals, inspiration was drawn from chatting platforms such as Slack, Facebook
-            Messenger, and Discord. While having a chat feature is a priority, I made the mistake of solely focusing on
-            the chat feature.
+            Messenger, and Discord. While having a chat feature was a priority, I made the initial mistake of solely
+            focusing on the chat feature and not the overall community connecting/building aspect.
+          </p>
+          <img style={{ margin: '0 auto 2.75rem auto', display: 'block' }} src={LocalIdeal} alt="local ideal" />
+          <p>
+            I was really inspired by Slack’s chatting platform and how easy it is to go to different channels for
+            different topics. I thought creating a sense of familiarity with a similar experienced app would be
+            beneficial but later realized that users compared Slack to Locals during user testings. And because of that,
+            I later changed my prototype to showcase a different approach as well as to incorporate more of a community
+            building aspect within the app.
           </p>
         </CaseStudyWrapper>
       </Wrapper>
