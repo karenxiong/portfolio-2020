@@ -4,6 +4,7 @@ import { ThemeContext } from 'styled-components';
 
 import { Header } from 'components/theme';
 import {
+  Caption,
   H1,
   H2,
   H3,
@@ -32,13 +33,16 @@ import {
 import DesignProcess from 'assets/illustrations/design-process-shoperon.svg';
 import RoughSketch from 'assets/illustrations/rough-sketch-shoperon.png';
 import RoughSketchDesktop from 'assets/illustrations/rough-sketch-desktop-shoperon.svg';
-import ShoperonFirstIphoneMock from 'assets/illustrations/shoperon-first-iphone-mock.svg';
+import ShoperonFirstQrGif from 'assets/illustrations/shoperon-qr-1.gif';
+import ShoperonSecondQrGif from 'assets/illustrations/shoperon-qr-2.gif';
 import UIKit from 'assets/illustrations/ui-kit-shoperon.png';
 import MyShoperonBanner from 'assets/illustrations/myshoperon-banner.svg';
 import ShoperonFirstIteration from 'assets/illustrations/shoperon-first-iteration.svg';
 import ShoperonSecondIteration from 'assets/illustrations/shoperon-second-iteration.svg';
 import ShoperonIterationArrow from 'assets/illustrations/shoperon-iteration-arrow.svg';
-import { Wrapper, TwoColumnGridWrapper, KeyQuestions, KeyAchievements } from './styles';
+import ShoperonAccessNav from 'assets/illustrations/shoperon-access-nav.svg';
+import ShoperonAccessTab from 'assets/illustrations/shoperon-access-tab.svg';
+import { Wrapper, TwoColumnGridWrapper, KeyQuestions } from './styles';
 
 export const MyShoperon = () => {
   const theme = useContext(ThemeContext);
@@ -114,7 +118,7 @@ export const MyShoperon = () => {
           </p>
           <TwoColumnGridWrapper>
             <UnorderedList>
-              <UnorderedListItem color={theme.color[1]}>
+              <UnorderedListItem color={theme.color[0]}>
                 <H5>turned an idea into a functional prototype 💡</H5>
                 <p>
                   Since MyShoperon is an early-stage startup company, we started out with just an idea of how we wanted
@@ -177,7 +181,7 @@ export const MyShoperon = () => {
           </p>
           <Desktop>
             <img
-              style={{ width: '100%', margin: '1rem auto 3rem auto', display: 'block' }}
+              style={{ width: '100%', margin: '1rem auto 2rem auto', display: 'block' }}
               src={RoughSketchDesktop}
               alt="rough sketch of designs"
             />
@@ -190,9 +194,9 @@ export const MyShoperon = () => {
             />
           </Mobile>
           <img
-            style={{ width: '100%', margin: '3rem auto 2rem auto', display: 'block', maxWidth: '16.25rem' }}
-            src={ShoperonFirstIphoneMock}
-            alt="Iphone mock of first iteration"
+            style={{ width: '100%', margin: '2rem auto 2rem auto', display: 'block', maxWidth: '30.25rem' }}
+            src={ShoperonFirstQrGif}
+            alt="Iphone Qr 1"
           />
           <p>
             While having QR codes are a great feature to include for efficiency, it was not feasible for the MVP
@@ -214,7 +218,9 @@ export const MyShoperon = () => {
                 src={ShoperonFirstIteration}
                 alt="Iphone mock of first iteration"
               />
-              <p>Scannable QR codes in the first iteration was not feasible for the MVP deadline.</p>
+              <Caption secondary>
+                Scannable QR codes in the first iteration was not feasible for the MVP deadline.
+              </Caption>
             </Iteration>
             <img style={{ width: '100%' }} src={ShoperonIterationArrow} alt="arrow" />
             <Iteration>
@@ -224,19 +230,70 @@ export const MyShoperon = () => {
                 src={ShoperonSecondIteration}
                 alt="Iphone mock of second iteration"
               />
-              <p>Verification codes are a more simple approach that serves the same purpose.</p>
+              <Caption secondary>Verification codes are a more simple approach that serves the same purpose.</Caption>
             </Iteration>
           </TwoStepIteration>
           <img
-            style={{ width: '100%', margin: '3rem auto 2rem auto', display: 'block', maxWidth: '16.25rem' }}
-            src={ShoperonFirstIphoneMock}
-            alt="Iphone mock of first iteration"
+            style={{ width: '100%', margin: '2rem auto 2rem auto', display: 'block', maxWidth: '30.25rem' }}
+            src={ShoperonSecondQrGif}
+            alt="Iphone Qr 2"
           />
           <p>
             Verification codes eliminates the concern of users with a malfunctioning camera. While this method is less
             efficient than quickly scanning a QR code; it is important to keep in mind that this feature is for a MVP
             that only has a small set of core features. Including QR codes are definitely in the future plans that will
             go alongside the verification codes.{' '}
+          </p>
+
+          <H2>Accessibility</H2>
+          <p>
+            Having an inclusive design played a huge role in the product designs. With our audience being anyone who
+            resides in the future partnered building and is minimum 18 years old, we wanted our product to be accessible
+            to anyone and everyone. We took the following steps to help ensure that the product is accessible:
+          </p>
+          <TwoColumnGridWrapper>
+            <UnorderedList>
+              <UnorderedListItem color={theme.color[0]}>
+                <H5>Consistent navigation and components</H5>
+                <p>
+                  All repeated components occur in the same order in every page so that it is easier to predict where to
+                  find things on each page. Also, creating and maintaining the design system was a priority. While it is
+                  still a work in progress, we ensured that all of the components with the same functionalities are
+                  consistent which would help users quickly identify those components on different pages.
+                </p>
+                <img style={{ margin: '0 auto', display: 'block' }} src={ShoperonAccessNav} alt="Shoperon Nav" />
+                <Caption secondary>Consistent components for the bottom navigation of MyShoperon</Caption>
+              </UnorderedListItem>
+              <UnorderedListItem color={theme.color[0]}>
+                <H5>Alternate text for images</H5>
+                <p>
+                  All of the images have alternate texts which will help individuals who have difficulty perceiving
+                  visual content. Assistive technology can read these alternative text aloud, present it visually, or
+                  convert it to braille.
+                </p>
+              </UnorderedListItem>
+              <UnorderedListItem color={theme.color[0]}>
+                <H5>Minimum AA accessibility standards</H5>
+                <p>
+                  To make certain that everyone will be able to see and read all of the content in the app, all the
+                  text, icons, and any graphical objects are ensured to meet a minimum contrast ratio of 4.5:1.
+                </p>
+              </UnorderedListItem>
+              <UnorderedListItem color={theme.color[0]}>
+                <H5>Tab/Focus order</H5>
+                <p>
+                  When working on wireframes, all interactive components include indicators for a logical tab order.
+                  This helps users who use screen readers or the tab button to navigate around the app easier while also
+                  eliminating confusion that comes from random tab orders.
+                </p>
+                <img style={{ margin: '0 auto', display: 'block' }} src={ShoperonAccessTab} alt="Shoperon Tab Order" />
+              </UnorderedListItem>
+            </UnorderedList>
+          </TwoColumnGridWrapper>
+          <p>
+            While these are just a scratch on the surface when it comes to inclusive design, our goal is to continue
+            with these standards as well as to learn more about inclusive designs practices to include them in future
+            iterations
           </p>
 
           <H2>Key takeaways</H2>
@@ -247,7 +304,7 @@ export const MyShoperon = () => {
           <p>Some key takeaways from this project are:</p>
           <TwoColumnGridWrapper>
             <UnorderedList>
-              <UnorderedListItem color={theme.color[1]}>
+              <UnorderedListItem color={theme.color[0]}>
                 <H5>Focus on building MVP core features</H5>
                 <p>
                   In a startup, there is only so much time and effort that you can invest. It's important to focus on
@@ -255,14 +312,14 @@ export const MyShoperon = () => {
                   features that can deliver the highest value for your users.
                 </p>
               </UnorderedListItem>
-              <UnorderedListItem color={theme.color[1]}>
+              <UnorderedListItem color={theme.color[0]}>
                 <H5>Don't spend too much time on the fine details</H5>
                 <p>
                   Earlier in my journey, I made the mistake of spending too much time on the UI and copy writing. Taking
                   a step back and reassessing the 3 key questions and user flows helped me to reprioritise the UX.
                 </p>
               </UnorderedListItem>
-              <UnorderedListItem color={theme.color[7]}>
+              <UnorderedListItem color={theme.color[0]}>
                 <H5>Focus on the problem</H5>
                 <p>
                   At the end of the day, it is your users pains that you will be solving for so keeping that front of

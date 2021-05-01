@@ -26,12 +26,13 @@ const StyledLink = styled(AnchorLink)`
 `;
 
 const NavbarLinks = ({ desktop }) => {
-  const [activeLink, setActiveLink] = useState('work');
+  const [activeLink, setActiveLink] = useState(window.location.pathname.replace('/', ''));
+  console.log('activeLink: ', activeLink);
   const links = ['work', 'play', 'about'];
 
   return (
     <Wrapper desktop={desktop}>
-      <StyledLink href="#work" active={activeLink === 'work' ? 'true' : 'false'} onClick={() => setActiveLink('work')}>
+      <StyledLink as={Link} to="/" active={activeLink === '' ? 'true' : 'false'} onClick={() => setActiveLink('work')}>
         work
       </StyledLink>
       <StyledLink href="#play" active={activeLink === 'play' ? 'true' : 'false'} onClick={() => setActiveLink('play')}>

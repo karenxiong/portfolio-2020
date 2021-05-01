@@ -46,3 +46,11 @@ export const H5 = styled.h5.attrs(props => ({
   margin: ${({ secondary }) => (secondary ? '2.5rem 0 1rem 0' : '1rem 0')};
   color: ${({ theme, secondary }) => (theme.mode === 'light' ? secondary ?? '#686868' : '#fff')};
 `;
+
+export const Caption = styled.div.attrs(props => ({
+  // or we can define dynamic ones
+  secondary: props.secondary && '#6F6F6F',
+}))`
+  text-align: center;
+  color: ${({ theme, secondary }) => (theme.mode === 'light' ? secondary ?? '#686868' : '#fff')};
+`;
