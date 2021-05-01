@@ -2,9 +2,9 @@ import React from 'react';
 import { Layout, SEO } from 'components/common';
 import { Locals } from 'components/locals';
 
-export default () => (
+export default ({ location }) => (
   <Layout>
     <SEO />
-    <Locals />
+    <Locals location={location} />
   </Layout>
 );

@@ -31,13 +31,13 @@ import LocalPersona from 'assets/illustrations/local-persona.svg';
 import LocalIdeal from 'assets/illustrations/local-ideal.svg';
 import { Wrapper, Statistics, Stat, TwoColumnGridWrapper, CriteriaList, SynthesisList, Persona } from './styles';
 
-export const Locals = () => {
+export const Locals = ({ location }) => {
   const theme = useContext(ThemeContext);
 
   return (
     <>
       <Wrapper as={Container}>
-        <Header />
+        <Header location={location} />
         <CaseStudyHeader>
           <InternalLink to="/">back</InternalLink>
           <div>project overview</div>

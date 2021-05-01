@@ -44,13 +44,13 @@ import ShoperonAccessNav from 'assets/illustrations/shoperon-access-nav.svg';
 import ShoperonAccessTab from 'assets/illustrations/shoperon-access-tab.svg';
 import { Wrapper, TwoColumnGridWrapper, KeyQuestions } from './styles';
 
-export const MyShoperon = () => {
+export const MyShoperon = ({ location }) => {
   const theme = useContext(ThemeContext);
 
   return (
     <>
       <Wrapper as={Container}>
-        <Header />
+        <Header location={location} />
         <CaseStudyHeader>
           <InternalLink to="/">back</InternalLink>
           <div>project overview</div>

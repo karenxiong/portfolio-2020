@@ -31,12 +31,12 @@ const Brand = styled.a`
   }
 `;
 
-const Navbar = () => (
+const Navbar = ({ location }) => (
   <Wrapper id="work">
     <Brand as={Link} to="/">
       karenxiong
     </Brand>
-    <NavbarLinks desktop />
+    <NavbarLinks location={location} desktop />
   </Wrapper>
 );
 

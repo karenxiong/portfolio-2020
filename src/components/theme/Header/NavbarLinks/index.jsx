@@ -25,8 +25,8 @@ const StyledLink = styled(AnchorLink)`
   }
 `;
 
-const NavbarLinks = ({ desktop }) => {
-  const [activeLink, setActiveLink] = useState(window.location.pathname.replace('/', ''));
+const NavbarLinks = ({ location, desktop }) => {
+  const [activeLink, setActiveLink] = useState(location.pathname.replace('/', ''));
   console.log('activeLink: ', activeLink);
   const links = ['work', 'play', 'about'];
 

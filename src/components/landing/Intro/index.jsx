@@ -27,13 +27,13 @@ const ScrollDownButton = () => (
   </ScrollDownButtonWrapper>
 );
 
-export const Intro = ({ page = 'home' }) => {
+export const Intro = ({ location, page = 'home' }) => {
   const theme = useContext(ThemeContext);
 
   return (
     <>
       <Wrapper as={Container}>
-        <Header />
+        <Header location={location} />
         <IntroWrapper>
           <Details>
             <AvatarBorder>
