@@ -42,7 +42,7 @@ const ScrollDownWrapper = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  border: 2px solid #00b4ff;
+  border: 2px solid #8900f2;
   font-size: 30px;
   overflow: hidden;
   cursor: pointer;
@@ -53,7 +53,7 @@ const ScrollDownWrapper = styled.div`
   margin: 0 auto; //---you can romove this line---
 
   svg {
-    color: #00b4ff;
+    color: #8900f2;
     animation: ${scrollDown} 2s ease infinite;
   }
 `;

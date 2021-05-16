@@ -4,7 +4,16 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import { ThemeContext } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { Container, Card, TitleWrap, CaseStudyCard, CaseStudyDetailsCard, CaseStudyButton } from 'components/common';
+import {
+  Container,
+  Card,
+  TitleWrap,
+  CaseStudyCard,
+  CaseStudyDetailsCard,
+  CaseStudyButton,
+  PrimaryButton,
+  H2,
+} from 'components/common';
 import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import Locals from 'assets/icons/locals.svg';
@@ -79,31 +88,31 @@ export const RecentWork = () => {
         <Item as={Link} to="/myshoperon" theme={theme}>
           <CaseStudyDetailsCard>
             <Content>
-              <h4>MyShoperon</h4>
+              <H2>MyShoperon</H2>
               <Status date="ongoing">Lead UI/UX Designer</Status>
               <p>An online platform that connects verified and rated neighbours to collect packages for each other.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#4F4E90" Icon={Arrow} as={Link} to="/myshoperon">
+              <PrimaryButton color="#4F4E90" href="/myshoperon" as={Link}>
                 View case study
-              </CaseStudyButton>
+              </PrimaryButton>
             </CaseStudyButtonWrapper>
           </CaseStudyDetailsCard>
         </Item>
         <Item as={Link} to="/locals" theme={theme}>
-          <CaseStudyCard Icon={Locals} label="Locals" background="#25A2B8" font="SF Pro Rounded" />
+          <CaseStudyCard Icon={Locals} label="Locals" background="#AC209E" font="SF Pro Rounded" />
         </Item>
         <Item as={Link} to="/locals" theme={theme}>
           <CaseStudyDetailsCard>
             <Content>
-              <h4>Locals</h4>
+              <H2>Locals</H2>
               <Status date="Mar. 2020">UX Designer & Researcher</Status>
-              <p>Build meaningful relationship with your neighbors.</p>
+              <p>Connect and build meaningful relationships with your neighbours.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#25A2B8" Icon={Arrow} as={Link} to="/locals">
+              <PrimaryButton color="#AC209E" href="/locals" as={Link}>
                 View case study
-              </CaseStudyButton>
+              </PrimaryButton>
             </CaseStudyButtonWrapper>
           </CaseStudyDetailsCard>
         </Item>

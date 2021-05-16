@@ -44,19 +44,17 @@ export const Item = styled.div`
 `;
 
 export const Content = styled.div`
-  margin-top: 1rem;
-  ${'' /* min-height: 145px; */}
-
-  h4 {
+  h2 {
     font-family: Castoro;
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic; 
     font-weight 1.25rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
 
   p {
-    font-size: .8rem;
+    font-size: .88rem;
     line-height: 1.5rem;
     color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#fff')};
   }
@@ -68,7 +66,7 @@ export const Content = styled.div`
     min-height: 0;
     margin-top: 0;
 
-    h4 {
+    h2 {
       margin-bottom: 0.25rem;
     }
   }
@@ -110,7 +108,7 @@ export const StatusWrapper = styled.div`
   align-items: baseline;
   margin-bottom: 1rem;
 
-  @media (min-width: 681px) and (max-width: 1100px) {
+  @media (min-width: 681px) and (max-width: 1164px) {
     flex-direction: column;
   }
 
@@ -124,17 +122,17 @@ export const Hyphen = styled.div`
   align-items: baseline;
   padding: 0 0.25rem;
 
-  @media (min-width: 681px) and (max-width: 1100px) {
+  @media (min-width: 681px) and (max-width: 1164px) {
     display: none;
   }
 `;
 
 export const Title = styled.h5`
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : 'white')};
   margin: 0;
-  @media (min-width: 681px) and (max-width: 1100px) {
+  @media (min-width: 681px) and (max-width: 1164px) {
     margin-bottom: 0.5rem;
   }
 `;
@@ -142,7 +140,7 @@ export const Title = styled.h5`
 export const Date = styled.div`
   font-family: Castoro;
   font-weight: normal;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   color: ${({ theme }) => (theme.mode === 'light' ? '#7a7a7a' : 'white')};
 `;
 
@@ -150,7 +148,7 @@ export const CaseStudyButtonWrapper = styled.div`
   display: flex;
   align-items: stretch;
 
-  @media (min-width: 681px) and (max-width: 1100px) {
+  @media (min-width: 681px) and (max-width: 1164px) {
     ${'' /* margin-top: 0.5rem; */}
   }
 `;

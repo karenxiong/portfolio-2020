@@ -48,6 +48,10 @@ const About = () => {
       height: 40vh;
       flex-grow: 1;
       margin: 2vmin;
+
+      :last-of-type {
+        margin-bottom: 2rem;
+      }
     }
 
     @media (max-width: 960px) {

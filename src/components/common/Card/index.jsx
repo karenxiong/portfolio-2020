@@ -14,6 +14,9 @@ export const TitleWrap = styled.div`
 `;
 
 export const CaseStudyDetailsCard = styled(Card)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0;
   margin-bottom: 1rem;
   background: transparent;
