@@ -84,7 +84,7 @@ export const RecentWork = () => {
               <p>An online platform that connects verified and rated neighbours to collect packages for each other.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <CaseStudyButton color="#4F4E90" Icon={Lock} as={Link} to="/myshoperon">
+              <CaseStudyButton color="#4F4E90" Icon={Arrow} as={Link} to="/myshoperon">
                 View case study
               </CaseStudyButton>
             </CaseStudyButtonWrapper>

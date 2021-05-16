@@ -125,3 +125,20 @@ export const Persona = styled.div`
     height: 12rem;
   }
 `;
+
+export const SubSection = styled.div`
+  margin: 2rem 4.5rem;
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#e6e6e6')};
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 960px) {
+    margin: 1.5rem;
+  }
+  @media (max-width: 680px) {
+  }
+`;

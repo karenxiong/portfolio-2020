@@ -5,6 +5,9 @@
   "version": "1.0.0",
   "author": "xiongykaren@gmail.com",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@reach/rect": "^0.12.1",
     "@reach/tabs": "^0.12.1",
     "axios": "^0.19.2",
@@ -14,6 +17,7 @@
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-canonical-urls": "^2.0.8",
     "gatsby-plugin-favicon": "^3.1.6",
+    "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-google-gtag": "^2.5.0",
     "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-nprogress": "^2.0.7",

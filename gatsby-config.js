@@ -11,6 +11,7 @@ module.exports = {
     author: config.author,
   },
   plugins: [
+    `gatsby-plugin-fontawesome-css`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',

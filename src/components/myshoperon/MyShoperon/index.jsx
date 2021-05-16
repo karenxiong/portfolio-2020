@@ -60,7 +60,7 @@ export const MyShoperon = ({ location }) => {
           <img
             style={{ width: '100%', marginTop: '1rem', marginBottom: 0 }}
             src={MyShoperonBanner}
-            alt="rough sketch of designs"
+            alt="MyShoperon Banner"
           />
           <CaseStudyAttributes>
             <CaseStudyAttribute>
@@ -126,7 +126,7 @@ export const MyShoperon = ({ location }) => {
                   concepts of the app until we found one that satisfied both the business goals and objectives.
                 </p>
               </UnorderedListItem>
-              <UnorderedListItem color={theme.color[1]}>
+              <UnorderedListItem color={theme.color[0]}>
                 <H5>juggled different hats 🎩</H5>
                 <p>
                   While my role is a UI/UX designer, I also worked and collaborated with the founder and product owner
@@ -135,7 +135,7 @@ export const MyShoperon = ({ location }) => {
                   and feasible.
                 </p>
               </UnorderedListItem>
-              <UnorderedListItem color={theme.color[7]}>
+              <UnorderedListItem color={theme.color[0]}>
                 <H5>created and established a ui kit 🎨</H5>
                 <p>
                   While the design system is still a work-in-progress, having predefined components for the interface,
@@ -164,8 +164,8 @@ export const MyShoperon = ({ location }) => {
           <TwoColumnGridWrapper>
             <KeyQuestions>
               <ListItem color={theme.color[0]}>Who is the customer?</ListItem>
-              <ListItem color={theme.color[1]}>What is their problem?</ListItem>
-              <ListItem color={theme.color[7]}>What is the best, lighest solution I can build for them?</ListItem>
+              <ListItem color={theme.color[0]}>What is their problem?</ListItem>
+              <ListItem color={theme.color[0]}>What is the best, lighest solution I can build for them?</ListItem>
             </KeyQuestions>
           </TwoColumnGridWrapper>
           <p>

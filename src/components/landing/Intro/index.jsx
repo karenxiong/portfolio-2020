@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import styled, { keyframes, ThemeContext } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 import { Header } from 'components/theme';
 import { Container, Button, Desktop, Mobile, Link, PrimaryButton, Feed } from 'components/common';
 import download from 'assets/icons/download.svg';
 import dev from 'assets/illustrations/dev.svg';
-import ScrollDown from 'assets/illustrations/scroll-down.svg';
 import { Wrapper, IntroWrapper, Details, Name, Status, Avatar, AvatarBorder } from './styles';
 
 const ScrollDownButtonWrapper = styled.div`
@@ -19,10 +20,50 @@ const ScrollDownButtonWrapper = styled.div`
   @media (max-width: 680px) {
   }
 `;
+const scrollDown = keyframes`
+  0%{
+      transform: translateY(-15px);
+      opacity: 0;
+  }
+  45%{
+      transform: translateY(0px);
+      opacity: 1;
+  }
+  65%{
+      transform: translateY(-5px);
+      opacity: 1;
+  }
+  100%{
+      transform: translateY(15px);
+      opacity: 0;
+  }
+`;
+const ScrollDownWrapper = styled.div`
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid #00b4ff;
+  font-size: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; //---you can romove this line---
+
+  svg {
+    color: #00b4ff;
+    animation: ${scrollDown} 2s ease infinite;
+  }
+`;
+
 const ScrollDownButton = () => (
   <ScrollDownButtonWrapper>
     <AnchorLink href="#feed">
-      <img src={ScrollDown} alt="Scroll down"></img>
+      <ScrollDownWrapper>
+        <FontAwesomeIcon icon={faAngleDown} light />
+      </ScrollDownWrapper>
     </AnchorLink>
   </ScrollDownButtonWrapper>
 );

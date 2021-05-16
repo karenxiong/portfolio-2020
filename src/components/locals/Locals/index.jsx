@@ -28,8 +28,23 @@ import {
 
 import DesignProcess from 'assets/illustrations/design-process.svg';
 import LocalPersona from 'assets/illustrations/local-persona.svg';
-import LocalIdeal from 'assets/illustrations/local-ideal.svg';
-import { Wrapper, Statistics, Stat, TwoColumnGridWrapper, CriteriaList, SynthesisList, Persona } from './styles';
+import LocalScenario from 'assets/illustrations/local-scenario.svg';
+import LocalRoughSketch from 'assets/illustrations/local-rough-sketch.svg';
+import LocalRoughDesign from 'assets/illustrations/local-rough-design.svg';
+import LocalFinalDesign from 'assets/illustrations/local-final-design.svg';
+import LocalFirstIter from 'assets/illustrations/local-first-iter.svg';
+import LocalSecondIter from 'assets/illustrations/local-second-iter.svg';
+import LocalsBanner from 'assets/illustrations/locals-banner.svg';
+import {
+  Wrapper,
+  Statistics,
+  Stat,
+  TwoColumnGridWrapper,
+  CriteriaList,
+  SynthesisList,
+  Persona,
+  SubSection,
+} from './styles';
 
 export const Locals = ({ location }) => {
   const theme = useContext(ThemeContext);
@@ -44,12 +59,7 @@ export const Locals = ({ location }) => {
           <div />
         </CaseStudyHeader>
         <CaseStudyWrapper>
-          <Hero>
-            <HeroSummary>
-              <H1>Locals</H1>
-              <p>Build meaningful relationships with your neighbours.</p>
-            </HeroSummary>
-          </Hero>
+          <img style={{ width: '100%', marginTop: '1rem', marginBottom: 0 }} src={LocalsBanner} alt="Locals Banner" />
           <CaseStudyAttributes>
             <CaseStudyAttribute>
               <H5>role</H5>
@@ -57,7 +67,7 @@ export const Locals = ({ location }) => {
             </CaseStudyAttribute>
             <CaseStudyAttribute>
               <H5>timeline</H5>
-              <p>Jan - Apr 2020</p>
+              <p>Winter 2020 (8 weeks)</p>
             </CaseStudyAttribute>
             <CaseStudyAttribute>
               <H5>skills</H5>
@@ -128,11 +138,11 @@ export const Locals = ({ location }) => {
           <TwoColumnGridWrapper>
             <H5>participant criteria</H5>
             <CriteriaList>
-              <ListItem color={theme.color[0]}>
+              <ListItem color={theme.color[1]}>
                 Must be currently living in a multi-family building (condo/apartment).
               </ListItem>
               <ListItem color={theme.color[1]}>Must have resided in the building for a minimum of 1 year.</ListItem>
-              <ListItem color={theme.color[7]}>Must be at least 18 years old.</ListItem>
+              <ListItem color={theme.color[1]}>Must be at least 18 years old.</ListItem>
             </CriteriaList>
           </TwoColumnGridWrapper>
           <H2>Synthesis</H2>
@@ -140,17 +150,23 @@ export const Locals = ({ location }) => {
           <TwoColumnGridWrapper>
             <SynthesisList>
               <li>
-                <H5>pain point 01 - busy schedules</H5>
+                <H5>
+                  <span style={{ color: '#B72424' }}>pain point 01</span> - busy schedules
+                </H5>
                 With busy schedules, residents have a hard time physically meeting and getting to know their neighbours.
               </li>
               <li>
-                <H5>pain point 03 - missed social events</H5>
-                With only brief encounters in the hallways, residents find it difficult to connect with their
-                neighbours.
+                <H5>
+                  <span style={{ color: '#B72424' }}>pain point 02</span> - no real connections
+                </H5>
+                Social events at buildings are often missed due to busy schedules or simply because it is forgotten.
               </li>
               <li>
-                <H5>pain point 02 - no real connections</H5>
-                Social events at buildings are often missed due to busy schedules or simply because it is forgotten.
+                <H5>
+                  <span style={{ color: '#B72424' }}>pain point 03</span> - missed social events
+                </H5>
+                With only brief encounters in the hallways, residents find it difficult to connect with their
+                neighbours.
               </li>
             </SynthesisList>
           </TwoColumnGridWrapper>
@@ -181,17 +197,80 @@ export const Locals = ({ location }) => {
           </FocusBlock>
           <H2>Ideation</H2>
           <p>
-            For the first iteration of Locals, inspiration was drawn from chatting platforms such as Slack, Facebook
-            Messenger, and Discord. While having a chat feature was a priority, I made the initial mistake of solely
-            focusing on the chat feature and not the overall community connecting/building aspect.
+            When first designing for Locals, a user flow chart was created to help work out a logical path as well as to
+            visualize the path a user will take in order to complete a task. In the flow chart below, the users’ task is
+            to introduce themselves in the introduction channel.
           </p>
-          <img style={{ margin: '0 auto 2.75rem auto', display: 'block' }} src={LocalIdeal} alt="local ideal" />
+          <SubSection>
+            <H5>User flow</H5>
+            <p>Send a message in the Introduction channel.</p>
+            <H5>Scenario</H5>
+            <p>
+              Samantha, a resident who moved in not too long ago, introduces herself to her new neighbours through the
+              building’s community app.{' '}
+            </p>
+            <img
+              style={{ margin: '0 auto 2.75rem auto', display: 'block' }}
+              src={LocalScenario}
+              alt="local scenario diagram"
+            />
+          </SubSection>
           <p>
-            I was really inspired by Slack’s chatting platform and how easy it is to go to different channels for
-            different topics. I thought creating a sense of familiarity with a similar experienced app would be
-            beneficial but later realized that users compared Slack to Locals during user testings. And because of that,
-            I later changed my prototype to showcase a different approach as well as to incorporate more of a community
-            building aspect within the app.
+            It was clear that users needed a platform to connect with their neighbours. With the flow chart in place and
+            a logical path found, rough sketches were drawn and then converted to lofi wireframes for user testing.
+          </p>
+          <img style={{ margin: 'auto', display: 'block' }} src={LocalRoughSketch} alt="rough sketch" />
+          <img style={{ margin: 'auto', display: 'block' }} src={LocalRoughDesign} alt="rough design" />
+          <p>
+            The goal for user testing the lofi wireframes were to see if they were straightforward and intuitive to
+            navigate around. Another objective was to see if each components used in the wireframes were clear and
+            understandable.
+          </p>
+          <H2>Iterations</H2>
+          <p>
+            Once user testings were completed and all of the user feedbacks are gathered, the following iterations were
+            made below:
+          </p>
+          <SubSection>
+            <H5>first iteration</H5>
+            <p>
+              Some users found the chat notifications card too limited. They understood that this notified and reminds
+              users of unread messages but what about community activities? This iteration changes chat notifications to
+              community notifications which will show notifications for unread direct messages, channel activities from
+              your close friends, and request notifictions.
+            </p>
+            <img
+              style={{ margin: '0 auto 2.75rem auto', display: 'block' }}
+              src={LocalFirstIter}
+              alt="local first iteration"
+            />
+            <H5>second iteration</H5>
+            <p>
+              While users were able to start direct messages with their neighbours by going to their profiles, there
+              needed to be a more efficient way to start a direct message with someone from the first chat screen. This
+              iteration includes adding an add button for users to search and start messaging their neighbours from the
+              chat screen.
+            </p>
+            <img
+              style={{ margin: '0 auto 2.75rem auto', display: 'block' }}
+              src={LocalSecondIter}
+              alt="local second iteration"
+            />
+          </SubSection>
+          <H2>Final design</H2>
+          <p>
+            Once changes were made in the lofi wireframes and a second user testing was held for the second iterations,
+            high fidelity wireframes are then created with the selected brand colours injected and tested for
+            accessibility (minimum AA accessibility standards).
+          </p>
+          <img style={{ margin: 'auto', display: 'block' }} src={LocalFinalDesign} alt="final design" />
+          <H2>Learning outcomes</H2>
+          <p>
+            I was challenged at each phase of this project. I was solving an unfamiliar problem (I have never lived in a
+            shared building before) and there was a lot to learn about the problem space itself before I could dive deep
+            in the project. Nevertheless, these challenges proved to be a catalyst for my growth and drove me to perform
+            new tasks and pushed me outside of my comfort zone with new experiences. Overall, I learned how to conduct
+            more effective research as well as how to tackle unfamiliar problems before getting into the designs.{' '}
           </p>
         </CaseStudyWrapper>
       </Wrapper>

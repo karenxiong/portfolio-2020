@@ -34,6 +34,7 @@ export const Button = styled.button`
 const StyledCaseStudyButton = styled.button`
   display: flex;
   align-items: center;
+  cursor: pointer;
   color: ${({ theme, color }) => (theme.mode === 'light' ? color : 'white')};
   background: ${({ theme, color }) => (theme.mode === 'light' ? 'transparent' : color)};
   font-size: 0.8em;

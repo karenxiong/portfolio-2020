@@ -28,16 +28,17 @@ const StyledLink = styled(AnchorLink)`
 const NavbarLinks = ({ location, desktop }) => {
   const [activeLink, setActiveLink] = useState(location.pathname.replace('/', ''));
   console.log('activeLink: ', activeLink);
-  const links = ['work', 'play', 'about'];
+  // const links = ['work', 'play', 'about'];
+  const links = ['work', 'about'];
 
   return (
     <Wrapper desktop={desktop}>
       <StyledLink as={Link} to="/" active={activeLink === '' ? 'true' : 'false'} onClick={() => setActiveLink('work')}>
         work
       </StyledLink>
-      <StyledLink href="#play" active={activeLink === 'play' ? 'true' : 'false'} onClick={() => setActiveLink('play')}>
+      {/* <StyledLink href="#play" active={activeLink === 'play' ? 'true' : 'false'} onClick={() => setActiveLink('play')}>
         play
-      </StyledLink>
+      </StyledLink> */}
       <StyledLink
         as={Link}
         to="/about"
