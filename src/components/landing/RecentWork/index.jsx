@@ -93,7 +93,7 @@ export const RecentWork = () => {
               <p>An online platform that connects verified and rated neighbours to collect packages for each other.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <PrimaryButton color="#4F4E90" href="/myshoperon" as={Link}>
+              <PrimaryButton color="#4F4E90" to="/myshoperon" as={Link}>
                 View case study
               </PrimaryButton>
             </CaseStudyButtonWrapper>
@@ -110,7 +110,7 @@ export const RecentWork = () => {
               <p>Connect and build meaningful relationships with your neighbours.</p>
             </Content>
             <CaseStudyButtonWrapper>
-              <PrimaryButton color="#AC209E" href="/locals" as={Link}>
+              <PrimaryButton color="#AC209E" to="/locals" as={Link}>
                 View case study
               </PrimaryButton>
             </CaseStudyButtonWrapper>
