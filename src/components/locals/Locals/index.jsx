@@ -202,9 +202,9 @@ export const Locals = ({ location }) => {
             to introduce themselves in the introduction channel.
           </p>
           <SubSection>
-            <H5>User flow</H5>
+            <H5>user flow</H5>
             <p>Send a message in the Introduction channel.</p>
-            <H5>Scenario</H5>
+            <H5>scenario</H5>
             <p>
               Samantha, a resident who moved in not too long ago, introduces herself to her new neighbours through the
               building’s community app.{' '}

@@ -254,7 +254,7 @@ export const MyShoperon = ({ location }) => {
           <TwoColumnGridWrapper>
             <UnorderedList>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Consistent navigation and components</H5>
+                <H5>consistent navigation and components</H5>
                 <p>
                   All repeated components occur in the same order in every page so that it is easier to predict where to
                   find things on each page. Also, creating and maintaining the design system was a priority. While it is
@@ -265,7 +265,7 @@ export const MyShoperon = ({ location }) => {
                 <Caption secondary>Consistent components for the bottom navigation of MyShoperon</Caption>
               </UnorderedListItem>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Alternate text for images</H5>
+                <H5>alternate text for images</H5>
                 <p>
                   All of the images have alternate texts which will help individuals who have difficulty perceiving
                   visual content. Assistive technology can read these alternative text aloud, present it visually, or
@@ -273,14 +273,14 @@ export const MyShoperon = ({ location }) => {
                 </p>
               </UnorderedListItem>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Minimum AA accessibility standards</H5>
+                <H5>minimum aa accessibility standards</H5>
                 <p>
                   To make certain that everyone will be able to see and read all of the content in the app, all the
                   text, icons, and any graphical objects are ensured to meet a minimum contrast ratio of 4.5:1.
                 </p>
               </UnorderedListItem>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Tab/Focus order</H5>
+                <H5>tab/focus order</H5>
                 <p>
                   When working on wireframes, all interactive components include indicators for a logical tab order.
                   This helps users who use screen readers or the tab button to navigate around the app easier while also
@@ -305,7 +305,7 @@ export const MyShoperon = ({ location }) => {
           <TwoColumnGridWrapper>
             <UnorderedList>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Focus on building MVP core features</H5>
+                <H5>focus on building mvp core features</H5>
                 <p>
                   In a startup, there is only so much time and effort that you can invest. It's important to focus on
                   the stripped-down version of what you envision to be your final product, with only a small set of core
@@ -313,14 +313,14 @@ export const MyShoperon = ({ location }) => {
                 </p>
               </UnorderedListItem>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Don't spend too much time on the fine details</H5>
+                <H5>don't spend too much time on the fine details</H5>
                 <p>
                   Earlier in my journey, I made the mistake of spending too much time on the UI and copy writing. Taking
                   a step back and reassessing the 3 key questions and user flows helped me to reprioritise the UX.
                 </p>
               </UnorderedListItem>
               <UnorderedListItem color={theme.color[0]}>
-                <H5>Focus on the problem</H5>
+                <H5>focus on the problem</H5>
                 <p>
                   At the end of the day, it is your users pains that you will be solving for so keeping that front of
                   mind is important as it's easy to lose sight of this when you're bogged down in the day to day.
