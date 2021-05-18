@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
   background-position: right top;
   background-repeat: no-repeat;
 
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto minmax(0, 1fr);
 
   @media (max-width: 960px) {
     grid-template-columns: 1fr;
-    height: 100vh;
     gap: 20px;
     grid-template-areas:
       'header'

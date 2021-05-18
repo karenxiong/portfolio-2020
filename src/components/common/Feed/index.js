@@ -9,6 +9,12 @@ import { RecentWork, Projects, Contact } from 'components/landing';
 import AboutFirst from 'assets/illustrations/about-1.jpeg';
 import AboutSecond from 'assets/illustrations/about-2.jpeg';
 import AboutThird from 'assets/illustrations/about-3.png';
+import Snowie from 'assets/illustrations/snowie.jpeg';
+import Plant from 'assets/illustrations/plant.jpeg';
+import Restaurant from 'assets/illustrations/restaurant.jpeg';
+import Lake from 'assets/illustrations/lake.jpeg';
+import Beehive from 'assets/illustrations/beehive.jpeg';
+import BitterMelon from 'assets/illustrations/bittermelon.jpeg';
 
 const DesktopFeed = styled(
   React.forwardRef((props, ref) => (
@@ -33,6 +39,58 @@ const MobileFeed = styled(
     display: none;
   }
 `;
+
+const TwoColumnGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 11.5rem;
+  gap: 1.625rem 3rem;
+
+  @media (max-width: 1175px) {
+    gap: 1.5rem;
+  }
+  @media (max-width: 960px) {
+    gap: 2rem 3rem;
+  }
+  @media (max-width: 680px) {
+    gap: 1.5rem;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+`;
+
+const Card = styled.div`
+  background-color: ${({ backgroundImage, backgroundColor }) => backgroundImage || backgroundColor};
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+`;
+
+const Photography = () => (
+  <TwoColumnGrid>
+    <img src={Snowie} alt="Snowie doggo" />
+    <img src={Plant} alt="Plant" />
+    <img src={Restaurant} alt="Restaurant" />
+    <img src={Lake} alt="Lake" />
+    <img src={Beehive} alt="Beehive" />
+    <img src={BitterMelon} alt="BitterMelon" />
+  </TwoColumnGrid>
+);
+const Illustration = () => (
+  <TwoColumnGrid>
+    <Card backgroundColor="#6F91E9" />
+    <Card backgroundColor="#E9C66F" />
+    <Card backgroundColor="#D86FE9" />
+    <Card backgroundColor="#6FE9CB" />
+    <Card backgroundColor="#E96F8C" />
+    <Card backgroundColor="#6FBDE9" />
+  </TwoColumnGrid>
+);
 
 const About = () => {
   const PhotoWrapper = styled.div`
@@ -120,6 +178,24 @@ const PAGE_TABS = {
       TabComponent: () => (
         <TabPanel>
           <Contact page="about" />
+        </TabPanel>
+      ),
+    },
+  ],
+  play: [
+    {
+      text: 'illustration',
+      TabComponent: () => (
+        <TabPanel>
+          <Illustration />
+        </TabPanel>
+      ),
+    },
+    {
+      text: 'photography',
+      TabComponent: () => (
+        <TabPanel>
+          <Photography />
         </TabPanel>
       ),
     },

@@ -72,6 +72,7 @@ export default ({ children }) => {
         borderColor,
         darkBorderColor,
         brandGradiant,
+        darkGradiant,
         darkBrandGradiant,
       }}
     >
