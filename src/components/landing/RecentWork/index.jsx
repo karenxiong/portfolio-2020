@@ -17,6 +17,7 @@ import {
 import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import Locals from 'assets/icons/locals.svg';
+import MyShoperon from 'assets/icons/myshoperon.svg';
 import Lock from 'assets/icons/lock.svg';
 import Arrow from 'assets/icons/arrow.svg';
 import {
@@ -83,7 +84,13 @@ export const RecentWork = () => {
     <Wrapper id="work">
       <Grid>
         <Item as={Link} to="/myshoperon" theme={theme}>
-          <CaseStudyCard Icon={Locals} label="MyShoperon" background="#4F4E90" font="SF Pro Rounded" />
+          <CaseStudyCard
+            Icon={MyShoperon}
+            showLabel={false}
+            label="MyShoperon"
+            background="#4F4E90"
+            font="SF Pro Rounded"
+          />
         </Item>
         <Item as={Link} to="/myshoperon" theme={theme}>
           <CaseStudyDetailsCard>

@@ -66,7 +66,7 @@ export const StyledPrimaryButton = styled(StyledCaseStudyButton)`
   display: flex;
   align-items: center;
   margin-top: 1.25rem;
-  width: ${({ Icon }) => (Icon ? '8rem' : '100%')};
+  width: ${({ Icon }) => (Icon ? '12rem' : '100%')};
   justify-content: center;
   color: white;
   background: ${({ color }) => color};
@@ -78,7 +78,7 @@ export const StyledPrimaryButton = styled(StyledCaseStudyButton)`
   }
 
   @media (max-width: 680px) {
-    width: ${({ Icon }) => (Icon ? '8rem' : '100%')};
+    width: ${({ Icon }) => (Icon ? '12rem' : '100%')};
   }
 `;
 export const PrimaryButton = ({ Icon, iconLeft, children, ...props }) => (

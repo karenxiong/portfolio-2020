@@ -43,8 +43,9 @@ const MobileFeed = styled(
 const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 11.5rem;
+  grid-auto-rows: 14.5rem;
   gap: 1.625rem 3rem;
+  margin-bottom: 3rem;
 
   @media (max-width: 1175px) {
     gap: 1.5rem;
@@ -53,6 +54,7 @@ const TwoColumnGrid = styled.div`
     gap: 2rem 3rem;
   }
   @media (max-width: 680px) {
+    grid-auto-rows: 11.5rem;
     gap: 1.5rem;
   }
 

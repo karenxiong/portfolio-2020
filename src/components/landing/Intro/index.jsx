@@ -3,6 +3,7 @@ import styled, { keyframes, ThemeContext } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { Link as GatsbyLink } from 'gatsby';
 
 import { Header } from 'components/theme';
 import { Container, Button, Desktop, Mobile, Link, PrimaryButton, Feed } from 'components/common';
@@ -77,7 +78,7 @@ export const Intro = ({ location, page = 'home' }) => {
         <Header location={location} />
         <IntroWrapper>
           <Details>
-            <AvatarBorder>
+            <AvatarBorder as={GatsbyLink} to="/about">
               <Avatar />
             </AvatarBorder>
             <Name>Karen Xiong</Name>
@@ -89,7 +90,8 @@ export const Intro = ({ location, page = 'home' }) => {
             <PrimaryButton
               color={theme.color[2]}
               Icon={download}
-              href="https://www.linkedin.com/in/karen-xiong/"
+              href="https://drive.google.com/file/d/1YVwG54h13AF9GG-OYOtu32lbPaADJNkm/view"
+              target="_blank"
               iconLeft
               as="a"
             >

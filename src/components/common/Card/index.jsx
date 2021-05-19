@@ -54,9 +54,9 @@ const Label = styled.div`
   ${({ font }) => font && `font-family: ${font}`}
 `;
 
-export const CaseStudyCard = ({ label, Icon, background, font }) => (
+export const CaseStudyCard = ({ showLabel = true, label, Icon, background, font }) => (
   <StyledCaseStudyCard background={background}>
-    <Icon aria-label={label} />
-    <Label font={font}>{label}</Label>
+    <Icon style={label === 'MyShoperon' ? { width: '14rem' } : {}} aria-label={label} />
+    {showLabel && <Label font={font}>{label}</Label>}
   </StyledCaseStudyCard>
 );

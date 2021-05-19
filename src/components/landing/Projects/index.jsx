@@ -7,7 +7,7 @@ import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
 
-const PROJECTS_TO_IGNORE = ['strategic-content', 'strategic-content-v2'];
+const PROJECTS_TO_IGNORE = ['strategic-content', 'strategic-content-v2', 'UXPortfolio'];
 
 export const Projects = () => {
   const theme = useContext(ThemeContext);
