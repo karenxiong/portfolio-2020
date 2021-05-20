@@ -90,7 +90,7 @@ export const Intro = ({ location, page = 'home' }) => {
             <PrimaryButton
               color={theme.color[2]}
               Icon={download}
-              href="https://drive.google.com/file/d/1YVwG54h13AF9GG-OYOtu32lbPaADJNkm/view"
+              href="https://drive.google.com/file/d/1YJvn6VZe-4etiYB3rZC9TkSyuZghW6YM/view"
               target="_blank"
               iconLeft
               as="a"
