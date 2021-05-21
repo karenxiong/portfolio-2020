@@ -208,24 +208,36 @@ export const Feed = ({ page, mobile }) => {
   const TAB_BORDER_BOTTOM_HEIGHT = 4;
   const TAB_LIST_BOTTOM_BORDER_HEIGHT = 2;
   const theme = useContext(ThemeContext);
-  const tabs = [
-    {
-      text: PAGE_TABS[page][0].text,
-      TabComponent: PAGE_TABS[page][0].TabComponent,
-      color: theme.color[1],
-      borderColor: theme.borderColor[1],
-      darkColor: theme.darkColor[1],
-      darkBorderColor: theme.darkBorderColor[1],
-    },
-    {
-      text: PAGE_TABS[page][1].text,
-      TabComponent: PAGE_TABS[page][1].TabComponent,
-      color: theme.color[7],
-      borderColor: theme.borderColor[7],
-      darkColor: theme.color[7],
-      darkBorderColor: theme.darkBorderColor[7],
-    },
-  ];
+  const tabs =
+    page === 'play'
+      ? [
+          {
+            text: PAGE_TABS[page][1].text,
+            TabComponent: PAGE_TABS[page][1].TabComponent,
+            color: theme.color[7],
+            borderColor: theme.borderColor[7],
+            darkColor: theme.color[7],
+            darkBorderColor: theme.darkBorderColor[7],
+          },
+        ]
+      : [
+          {
+            text: PAGE_TABS[page][0].text,
+            TabComponent: PAGE_TABS[page][0].TabComponent,
+            color: theme.color[1],
+            borderColor: theme.borderColor[1],
+            darkColor: theme.darkColor[1],
+            darkBorderColor: theme.darkBorderColor[1],
+          },
+          {
+            text: PAGE_TABS[page][1].text,
+            TabComponent: PAGE_TABS[page][1].TabComponent,
+            color: theme.color[7],
+            borderColor: theme.borderColor[7],
+            darkColor: theme.color[7],
+            darkBorderColor: theme.darkBorderColor[7],
+          },
+        ];
 
   const AnimatedContext = React.createContext();
   function AnimatedTabs({ color, children, ...rest }) {
