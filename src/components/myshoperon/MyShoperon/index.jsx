@@ -276,7 +276,7 @@ export const MyShoperon = ({ location }) => {
                 <H5>minimum aa accessibility standards</H5>
                 <p>
                   To make certain that everyone will be able to see and read all of the content in the app, all the
-                  text, icons, and any graphical objects are ensured to meet a minimum contrast ratio of 4.5:1.
+                  text, icons, and any graphical objects are ensured to meet a minimum contrast ratio of 4:5:1.
                 </p>
               </UnorderedListItem>
               <UnorderedListItem color={theme.color[0]}>
