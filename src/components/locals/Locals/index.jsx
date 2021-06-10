@@ -159,14 +159,14 @@ export const Locals = ({ location }) => {
                 <H5>
                   <span style={{ color: '#B72424' }}>pain point 02</span> - no real connections
                 </H5>
-                Social events at buildings are often missed due to busy schedules or simply because it is forgotten.
+                With only brief encounters in the hallways, residents find it difficult to connect with their
+                neighbours.
               </li>
               <li>
                 <H5>
                   <span style={{ color: '#B72424' }}>pain point 03</span> - missed social events
                 </H5>
-                With only brief encounters in the hallways, residents find it difficult to connect with their
-                neighbours.
+                Social events at buildings are often missed due to busy schedules or simply because it is forgotten.
               </li>
             </SynthesisList>
           </TwoColumnGridWrapper>
