@@ -52,12 +52,6 @@ export const Locals = ({ location }) => {
   return (
     <>
       <Wrapper as={Container}>
-        <Header location={location} />
-        <CaseStudyHeader>
-          <InternalLink to="/">back</InternalLink>
-          <div>project overview</div>
-          <div />
-        </CaseStudyHeader>
         <CaseStudyWrapper>
           <img style={{ width: '100%', marginTop: '1rem', marginBottom: 0 }} src={LocalsBanner} alt="Locals Banner" />
           <CaseStudyAttributes>

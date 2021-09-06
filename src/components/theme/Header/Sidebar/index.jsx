@@ -1,10 +1,9 @@
 import React from 'react';
-import NavbarLinks from '../NavbarLinks';
 import { Wrapper } from './styles';
 
-const Sidebar = ({ location, sidebar, toggle }) => (
+const Sidebar = ({ children, location, sidebar, toggle }) => (
   <Wrapper active={sidebar} onClick={toggle}>
-    <NavbarLinks location={location} />
+    {children}
   </Wrapper>
 );
 

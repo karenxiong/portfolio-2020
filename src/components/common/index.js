@@ -12,3 +12,4 @@ export * from './Responsive';
 export * from './SEO';
 export * from './HR';
 export * from './FocusCaption';
+export * from './PasswordProtect';

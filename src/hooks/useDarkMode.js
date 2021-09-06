@@ -21,8 +21,9 @@ export default () => {
     if (localTheme) {
       window.localStorage.setItem('theme', localTheme);
       setTheme(localTheme);
-    } else if (prefersDarkMode) {
-      setTheme('dark');
+      // TODO: uncomment when we support dark mode again
+      // } else if (prefersDarkMode) {
+      //   setTheme('dark');
     } else {
       setTheme('light');
     }

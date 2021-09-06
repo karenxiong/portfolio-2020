@@ -1,12 +1,12 @@
 import React from 'react';
 import { Layout, SEO } from 'components/common';
-import { Intro } from 'components/landing';
+import { Writing } from 'components/writing';
 
 export default ({ location }) => (
   <>
     <SEO />
     <Layout location={location}>
-      <Intro location={location} />
+      <Writing location={location} />
     </Layout>
   </>
 );

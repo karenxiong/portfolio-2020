@@ -1,11 +1,12 @@
 import React from 'react';
-import { Footer } from 'components/theme';
+import { Header, Footer } from 'components/theme';
 import { Global } from './styles';
 import './fonts.css';
 
-export const Layout = ({ children }) => (
+export const Layout = ({ children, location }) => (
   <>
     <Global />
+    <Header location={location} />
     {children}
     <Footer />
   </>

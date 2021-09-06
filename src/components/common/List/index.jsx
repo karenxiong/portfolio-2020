@@ -8,13 +8,13 @@ export const UnorderedList = styled.ul`
     margin: 1.5rem;
   }
   @media (max-width: 680px) {
-    margin: 1.5rem;
+    margin: 0rem;
   }
 `;
 export const UnorderedListItem = styled.li`
   ::marker {
-    font-size: 1.75em;
-    color: ${({ color }) => color};
+    font-size: 1.5rem;
+    color: rgb(51, 51, 51);
   }
 `;
 
