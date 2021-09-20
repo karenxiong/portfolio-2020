@@ -13,11 +13,11 @@ export const Statistics = styled.div`
   grid-template-rows: minmax(0, 1fr);
   justify-content: space-between;
   gap: 1rem;
-  margin: 2.5rem;
+  margin: 0 2.5rem;
 
   @media (max-width: 960px) {
     ${'' /* grid-template-columns: repeat(2, 1fr); */}
-    margin: 1.5rem;
+    margin: 0 1.5rem;
   }
 
   @media (max-width: 680px) {
@@ -38,13 +38,13 @@ export const Stat = styled.div`
 `;
 
 export const TwoColumnGridWrapper = styled.div`
-  margin: 2.5rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
   h5 {
     font-size: 1.25rem;
     color: ${({ theme }) => (theme.mode === 'light' ? '#333333' : '#e6e6e6')};
   }
   @media (max-width: 960px) {
-    margin: 1.5rem;
+    margin: 1rem;
   }
   @media (max-width: 680px) {
   }
@@ -99,7 +99,7 @@ export const SynthesisList = styled.ul`
   }
   @media (max-width: 960px) {
     ${'' /* grid-template-columns: repeat(2, 1fr); */}
-    margin: 1.5rem;
+    margin: 0 0.5rem 1.5rem 0.5rem;
   }
 
   @media (max-width: 680px) {
@@ -127,7 +127,7 @@ export const Persona = styled.div`
 `;
 
 export const SubSection = styled.div`
-  margin: 2rem 4.5rem;
+  margin: 0rem 4.5rem;
   h5 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
@@ -137,7 +137,7 @@ export const SubSection = styled.div`
     margin-bottom: 1.5rem;
   }
   @media (max-width: 960px) {
-    margin: 1.5rem;
+    margin: 0 0.5rem;
   }
   @media (max-width: 680px) {
   }

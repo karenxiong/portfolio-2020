@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { HR, H4 } from 'components/common';
 
 const StyledFocusCaption = styled.div`
-  margin: 2.5rem 5rem;
+  margin: 1.5rem 5rem;
   border: 1px solid ${({ color }) => color};
   h4 {
     margin: 0;
@@ -26,10 +26,10 @@ const StyledFocusCaption = styled.div`
   }
 
   @media (max-width: 960px) {
-    margin: 2rem 4rem;
+    margin: 0.75rem 3rem;
   }
   @media (max-width: 680px) {
-    margin: 1.5rem;
+    margin: 0.5rem;
   }
 `;
 export const FocusCaption = ({ title, color, secondaryColor, children }) => (
@@ -40,6 +40,6 @@ export const FocusCaption = ({ title, color, secondaryColor, children }) => (
         <HR />
       </>
     )}
-    <p>{children}</p>
+    <p style={{ marginBottom: '0px' }}>{children}</p>
   </StyledFocusCaption>
 );

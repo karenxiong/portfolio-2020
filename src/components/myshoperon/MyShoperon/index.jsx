@@ -50,7 +50,7 @@ import ShoperonAccessTab from 'assets/illustrations/shoperon-access-tab.svg';
 import { makeStyles } from '@material-ui/core/styles';
 import { Wrapper, TwoColumnGridWrapper, KeyQuestions } from './styles';
 
-const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles(() => ({
   caseStudyBanner: {
     marginTop: '75px',
     marginBottom: '40px',

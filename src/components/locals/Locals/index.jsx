@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
 import { Link as InternalLink } from 'gatsby';
 import { ThemeContext } from 'styled-components';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 import { Header } from 'components/theme';
 import {
   H1,
-  H2,
+  h1,
   H3,
   H5,
   HR,
   ListItem,
   FocusCaption,
-  Container,
   Mobile,
   Link,
   Hero,
@@ -46,42 +48,21 @@ import {
   SubSection,
 } from './styles';
 
+import { useStyles } from '../../myshoperon/MyShoperon/index.jsx';
+
 export const Locals = ({ location }) => {
   const theme = useContext(ThemeContext);
+  const classes = useStyles();
 
   return (
     <>
-      <Wrapper as={Container}>
-        <CaseStudyWrapper>
-          <img style={{ width: '100%', marginTop: '1rem', marginBottom: 0 }} src={LocalsBanner} alt="Locals Banner" />
-          <CaseStudyAttributes>
-            <CaseStudyAttribute>
-              <H5>role</H5>
-              <p>Lead product designer</p>
-            </CaseStudyAttribute>
-            <CaseStudyAttribute>
-              <H5>timeline</H5>
-              <p>Winter 2020 (8 weeks)</p>
-            </CaseStudyAttribute>
-            <CaseStudyAttribute>
-              <H5>skills</H5>
-              <ul>
-                <li>Product thinking</li>
-                <li>User research</li>
-                <li>Interaction design</li>
-                <li>Visual Design</li>
-              </ul>
-            </CaseStudyAttribute>
-            <CaseStudyAttribute>
-              <H5>tools</H5>
-              <ul>
-                <li>Sketch</li>
-                <li>InVision</li>
-              </ul>
-            </CaseStudyAttribute>
-          </CaseStudyAttributes>
-          <HR />
-          <H2>Project Overview</H2>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Grid className={classes.root} container direction="column">
+          <Grid container justifyContent="center" alignItems="center" xs={12}>
+            <img className={classes.caseStudyBanner} src={LocalsBanner} alt="Locals Banner" />
+          </Grid>
+          <h1>Project Overview</h1>
           <p>
             This is a capstone project that was created as part of the full-time User Experience program at{' '}
             <Link style={{ fontSize: '1rem' }} href="https://brainstation.io/course/toronto/user-experience-immersive">
@@ -102,14 +83,19 @@ export const Locals = ({ location }) => {
             neighbours. Any social events are also easily and widely broadcasted to encourage and help bring neighbours
             together.
           </FocusCaption>
-          <H2>Design Process</H2>
+
+          <h1 style={{ marginTop: '2.5rem' }}>Design Process</h1>
           <p>
             Throughout the project the double diamond design process was used. Each of the{' '}
             <Link style={{ fontSize: '1rem' }}>4</Link> phases were revisted with reiterations between the stages to
             further explore and better understand the problem space as well as to continuously improve on the solution.
           </p>
-          <img style={{ margin: 'auto', display: 'block' }} src={DesignProcess} alt="design process diagram" />
-          <H2>Research</H2>
+          <Grid container justifyContent="center" alignItems="center" xs={12}>
+            <img style={{}} src={DesignProcess} alt="design process diagram" />
+          </Grid>
+
+          <h1>Research</h1>
+
           <p>Through secondary research conducted around the problem space, it was found that…</p>
           <Statistics>
             <Stat color={theme.color[0]}>
@@ -139,7 +125,7 @@ export const Locals = ({ location }) => {
               <ListItem color={theme.color[1]}>Must be at least 18 years old.</ListItem>
             </CriteriaList>
           </TwoColumnGridWrapper>
-          <H2>Synthesis</H2>
+          <h1>Synthesis</h1>
           <p>Through the 10 user interviews, common themes were found and 3 primary pain points were identified.</p>
           <TwoColumnGridWrapper>
             <SynthesisList>
@@ -189,7 +175,7 @@ export const Locals = ({ location }) => {
               <FocusBlockText>building</FocusBlockText> on those relationships?
             </FocusBlockBody>
           </FocusBlock>
-          <H2>Ideation</H2>
+          <h1>Ideation</h1>
           <p>
             When first designing for Locals, a user flow chart was created to help work out a logical path as well as to
             visualize the path a user will take in order to complete a task. In the flow chart below, the users’ task is
@@ -220,7 +206,7 @@ export const Locals = ({ location }) => {
             navigate around. Another objective was to see if each components used in the wireframes were clear and
             understandable.
           </p>
-          <H2>Iterations</H2>
+          <h1>Iterations</h1>
           <p>
             Once user testings were completed and all of the user feedbacks are gathered, the following iterations were
             made below:
@@ -251,14 +237,16 @@ export const Locals = ({ location }) => {
               alt="local second iteration"
             />
           </SubSection>
-          <H2>Final design</H2>
+          <h1>Final design</h1>
           <p>
             Once changes were made in the lofi wireframes and a second user testing was held for the second iterations,
             high fidelity wireframes are then created with the selected brand colours injected and tested for
             accessibility (minimum AA accessibility standards).
           </p>
-          <img style={{ margin: 'auto', display: 'block' }} src={LocalFinalDesign} alt="final design" />
-          <H2>Learning outcomes</H2>
+          <Grid container justifyContent="center" alignItems="center" xs={12}>
+            <img style={{ marginBottom: '56px' }} src={LocalFinalDesign} alt="final design" />
+          </Grid>
+          <h1>Learning outcomes</h1>
           <p>
             I was challenged at each phase of this project. I was solving an unfamiliar problem (I have never lived in a
             shared building before) and there was a lot to learn about the problem space itself before I could dive deep
@@ -266,9 +254,8 @@ export const Locals = ({ location }) => {
             new tasks and pushed me outside of my comfort zone with new experiences. Overall, I learned how to conduct
             more effective research as well as how to tackle unfamiliar problems before getting into the designs.{' '}
           </p>
-        </CaseStudyWrapper>
-      </Wrapper>
-      <Mobile as={Container}>{/* <Feed mobile /> */}</Mobile>
+        </Grid>
+      </Container>
     </>
   );
 };

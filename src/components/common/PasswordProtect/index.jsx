@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -52,7 +52,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   button: {
-    pointer: 'cursor',
+    cursor: 'pointer',
     backgroundColor: 'rgba(230, 202, 239, 1)',
     borderRadius: '10px',
     width: '114px',
@@ -80,8 +80,11 @@ export const PasswordProtect = ({ children }) => {
     showPassword: false,
   });
 
+  const [isSubmitted, setSubmitted] = useState(false);
+
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });
+    setSubmitted(false);
   };
 
   const handleClickShowPassword = () => {
@@ -91,9 +94,10 @@ export const PasswordProtect = ({ children }) => {
   const handleMouseDownPassword = event => {
     event.preventDefault();
   };
-  return children;
 
-  return values.submitPassword !== 'Karenxiong2021' ? (
+  const isInvalidPassword = values.submitPassword !== 'Karenxiong2021';
+
+  return isInvalidPassword ? (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
@@ -126,7 +130,8 @@ export const PasswordProtect = ({ children }) => {
                 }
                 onKeyPress={event => {
                   if (event.key === 'Enter') {
-                    setValues({ ...values, submitPassword: event.target.value });
+                    handleChange('submitPassword')(event);
+                    setSubmitted(true);
                   }
                 }}
                 labelWidth={70}
@@ -135,11 +140,19 @@ export const PasswordProtect = ({ children }) => {
             <button
               type="submit"
               className={classes.button}
-              onClick={() => setValues({ ...values, submitPassword: values.password })}
+              onClick={() => {
+                setValues({ ...values, submitPassword: values.password });
+                setSubmitted(true);
+              }}
             >
               enter
             </button>
           </Grid>
+          {isSubmitted && (
+            <Grid style={{ color: 'red' }} container xs={12} justifyContent="center" alignItems="center">
+              Incorrect password - please try again or contact me for the password
+            </Grid>
+          )}
         </Grid>
       </Container>
     </React.Fragment>
