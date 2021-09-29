@@ -66,22 +66,22 @@ export const Intro = () => {
           </Grid>
           <Grid className={classes.caseStudy} container xs={12} justifyContent="flex-start">
             <GatsbyLink to="/">
-              <img src={RightHome} alt="right at home case study" />
+              <img loading="lazy" src={RightHome} alt="right at home case study" />
             </GatsbyLink>
           </Grid>
           <Grid className={classes.caseStudy} container xs={12} justifyContent="flex-end">
             <GatsbyLink to="/">
-              <img src={Pickups} alt="pickups case study" />
+              <img loading="lazy" src={Pickups} alt="pickups case study" />
             </GatsbyLink>
           </Grid>
           <Grid className={classes.caseStudy} container xs={12} justifyContent="flex-start">
             <GatsbyLink to="/myshoperon">
-              <img src={Shoperon} alt="my shoperon case study" />
+              <img loading="lazy" src={Shoperon} alt="my shoperon case study" />
             </GatsbyLink>
           </Grid>
           <Grid className={classes.caseStudy} container xs={12} justifyContent="flex-end">
             <GatsbyLink to="/">
-              <img src={FindWork} alt="find work case study" />
+              <img loading="lazy" src={FindWork} alt="find work case study" />
             </GatsbyLink>
           </Grid>
         </Grid>
